@@ -7,9 +7,9 @@ The data processing files are:
 
 mothur_processing_dbdb.batch (data processing with mothur)
 
-otu_barrier_en.R (elastic net processing with mikropml using OTUs as input data)
+otu_corr.R (elastic net processing with mikropml using OTUs as input data)
 
-combine_otu_barrier_en.R (assembly of elastic net data using OTUs as input data)
+combine_otu_corr_en.R (assembly of elastic net data using OTUs as input data)
 
 Makefile (makefile rule structure for making .Rds files from mikropml)
 
@@ -21,8 +21,11 @@ otu_dbdb.R (analysis and visualization of mothur and mikropml output)
 
 asv_dbdb.R (analysis and visualization of mothur output)
 
-amino_Acid_analysis.R (analysis and visualization of metabolomics data)
+amino_acid_analysis.R (analysis and visualization of metabolomics data)
 
 in_vivo_analysis.R (analysis and visualization of mouse experimental data)
 
 luminex.R (analysis and visualization of luminex data)
+
+Finally, I am providing a mothur logfile (mothur.1715352818.logile) for the 16S rRNA gene sequencing data processing for user reference. 
+
