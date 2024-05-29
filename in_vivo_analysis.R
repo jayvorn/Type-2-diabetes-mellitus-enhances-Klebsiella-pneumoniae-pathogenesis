@@ -18,7 +18,8 @@ og_metadata<-read.csv(og_metadata, "~/Desktop/scratch/dbdb_work/processed_data/o
 #Lung mono
 lung_mono_data<-read.csv(lung_mono_data, "~/Desktop/scratch/dbdb_work/processed_data/lung_mono_data.csv")
 
-lung_mono_data_high<-rbind(M429_438, M439_448, M699_713, M744_757)%>%
+lung_mono_data_high<-lung_mono_data%>%
+  filter(dose == "high") %>%
   filter(LOD == "No") %>%
   mutate(log_CFU_per_g_total = log(CFU_per_g_total, 10))%>%
   mutate(log_CFU_per_mL = log(CFU_per_mL, 10))%>%
@@ -26,7 +27,8 @@ lung_mono_data_high<-rbind(M429_438, M439_448, M699_713, M744_757)%>%
   mutate(mean_log_CFU_per_g_total = mean(log_CFU_per_g_total)) %>%
   mutate(mean_log_CFU_per_mL = mean(log_CFU_per_mL))%>%
   ungroup()
-lung_mono_data_low<-rbind(M769_825)%>%
+lung_mono_data_low<-lung_mono_data%>%
+  filter(dose == "low") %>%
   filter(LOD == "No") %>%
   mutate(log_CFU_per_g_total = log(CFU_per_g_total, 10))%>%
   mutate(log_CFU_per_mL = log(CFU_per_mL, 10))%>%
