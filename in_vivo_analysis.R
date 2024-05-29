@@ -11,106 +11,12 @@ library(DescTools)
 setwd("~/Desktop/scratch/dbdb_work")
 #===================================================================
 # import data ##################################
-#Oral gavage intact microbiome: M294-M303 (10), M324-333 (10), M604-613 (9 - no 611), M629-638 (9 - no 638)
-M294_303<-read_xlsx("~/Desktop/scratch/dbdb_work/raw_data/20230913_M294_303.xlsx") %>%
-  select(Condition, Sample, CFU_per_g_total, LOD, Tissue, Barrier, Genotype) %>%
-  filter(Sample != "Inoculum") %>%
-  filter(Tissue == "cecum")%>%
-  mutate(Abx = "No")
-M324_333<-read_xlsx("~/Desktop/scratch/dbdb_work/raw_data/20230920_M324_333.xlsx") %>%
-  select(Condition, Sample, CFU_per_g_total, LOD, Tissue, Barrier, Genotype) %>%
-  filter(Sample != "Inoculum")%>%
-  filter(Tissue == "cecum")%>%
-  mutate(Abx = "No")
-M604_613<-read_xlsx("~/Desktop/scratch/dbdb_work/raw_data/20240109_M604_613.xlsx") %>%
-  select(Condition, Sample, CFU_per_g_total, LOD, Tissue, Barrier, Genotype) %>%
-  filter(Sample != "Inoculum") %>%
-  filter(Tissue == "cecum")%>%
-  filter(Sample != "cecum_M611")%>%
-  mutate(Abx = "No")
-M629_638<-read_xlsx("~/Desktop/scratch/dbdb_work/raw_data/20240118_M629_638.xlsx") %>%
-  select(Condition, Sample, CFU_per_g_total, LOD, Tissue, Barrier, Genotype) %>%
-  filter(Sample != "Inoculum") %>%
-  filter(Tissue == "cecum")%>%
-  filter(Sample != "cecum_M638")%>%
-  mutate(Abx = "No")
-
-#Oral gavage disrupted microbiome: M544-553 (10), M689-696 (4 - only 689, 690, 693, 969) 
-M544_553<-read_xlsx("~/Desktop/scratch/dbdb_work/raw_data/20231213_M544_553.xlsx") %>%
-  select(Condition, Sample, CFU_per_g_total, LOD, Tissue, Barrier, Genotype) %>%
-  filter(Sample != "Inoculum")%>%
-  filter(Tissue == "cecum")%>%
-  mutate(Abx = "Yes")
-M689_696<-read_xlsx("~/Desktop/scratch/dbdb_work/raw_data/20240214_M689_698.xlsx") %>%
-  select(Condition, Sample, CFU_per_g_total, LOD, Exclude, Tissue, Barrier, Genotype) %>%
-  filter(Sample != "Inoculum")%>%
-  filter(Tissue == "cecum")%>%
-  filter(Exclude == "No") %>%
-  select(-Exclude)%>%
-  mutate(Abx = "Yes")
-
-#Pneumonia KPPR1 only high dose: M429-448 (20), M699-713 (14 - no 709), M744_757 (14 - includes controls)
-M429_438<-read_xlsx("~/Desktop/scratch/dbdb_work/raw_data/20231026_M429_438.xlsx") %>%
-  select(Condition, Sample, CFU_per_g_total, CFU_per_mL,LOD, Tissue, Barrier, Genotype) %>%
-  filter(Sample != "Inoculum") %>%
-  filter(LOD == "Yes" | LOD == "No") %>%
-  mutate(dose = "high")
-M439_448<-read_xlsx("~/Desktop/scratch/dbdb_work/raw_data/20231102_M439_448.xlsx") %>%
-  select(Condition, Sample, CFU_per_g_total, CFU_per_mL,LOD, Tissue, Barrier, Genotype) %>%
-  filter(Sample != "Inoculum")  %>%
-  filter(LOD == "Yes" | LOD == "No") %>%
-  mutate(dose = "high")
-M699_713<-read_xlsx("~/Desktop/scratch/dbdb_work/raw_data/20240221_M699_713.xlsx") %>%
-  select(Condition, Sample, CFU_per_g_total, CFU_per_mL,LOD, Tissue, Barrier, Genotype) %>%
-  filter(Sample != "Inoculum")  %>%
-  filter(LOD == "Yes" | LOD == "No") %>%
-  mutate(dose = "high")
-M744_757<-read_xlsx("~/Desktop/scratch/dbdb_work/raw_data/20240315_M744_757.xlsx") %>%
-  select(Condition, Sample, CFU_per_g_total, CFU_per_mL,LOD, Tissue, Barrier, Genotype) %>%
-  filter(Sample != "Inoculum")  %>%
-  filter(LOD == "Yes" | LOD == "No") %>%
-  mutate(dose = "high")
-
-#Pneumonia KPPR1 only low dose: M796_825
-M769_825<-read_xlsx("~/Desktop/scratch/dbdb_work/raw_data/20240404_M796_825.xlsx") %>%
-  select(Condition, Sample, CFU_per_g_total, CFU_per_mL,LOD, Tissue, Barrier, Genotype) %>%
-  filter(Sample != "Inoculum") %>%
-  filter(LOD == "Yes" | LOD == "No") %>%
-  mutate(dose = "low")
-
-#Pneumonia gltA: M594-603 (10), M614-628 (14 - no 618)
-M594_603<-read_xlsx("~/Desktop/scratch/dbdb_work/raw_data/20240109_M594_603.xlsx") %>%
-  select(Condition, Sample, Kp_strain_ref,CFU_per_mL_strain, CFU_per_g_strain, LOD, Tissue, Barrier, Genotype, Log_CI) %>%
-  filter(Sample != "Inoculum")  %>%
-  filter(LOD == "Yes" | LOD == "No")
-M614_628<-read_xlsx("~/Desktop/scratch/dbdb_work/raw_data/20240117_M614_628.xlsx") %>%
-  select(Condition, Sample, Kp_strain_ref,CFU_per_mL_strain, CFU_per_g_strain, LOD, Tissue, Barrier, Genotype, Log_CI) %>%
-  filter(Sample != "Inoculum")  %>%
-  filter(LOD == "Yes" | LOD == "No")
-#===================================================================
-# combine and export data ##################################
 #Oral gavage
-og_data<-rbind(M294_303, M324_333, M604_613, M629_638, M544_553, M689_696)%>%
-  filter(LOD == "No") %>%
-  mutate(log_CFU_per_g_total = log(CFU_per_g_total, 10)) %>%
-  mutate(group = paste(Genotype, "_", Abx, sep = ""))%>%
-  group_by(group)%>%
-  mutate(mean_log_CFU_per_g_total = mean(log_CFU_per_g_total)) %>%
-  ungroup()
-write.csv(og_data, "~/Desktop/scratch/dbdb_work/processed_data/og_data.csv")
-og_metadata<-rbind(M294_303, M324_333, M604_613, M629_638, M544_553, M689_696)%>%
-  mutate(group = paste(Genotype, "_", Abx, sep = ""))%>%
-  mutate(log_CFU_per_g_total = log(CFU_per_g_total, 10)) %>%
-  rename(genotype = Genotype) %>%
-  rename(barrier = Barrier) %>%
-  mutate(sample = paste("M", str_sub(Sample, 7,10), sep = "")) %>%
-  select(-Sample) %>%
-  select(sample, genotype, barrier, group, log_CFU_per_g_total)
-write.csv(og_metadata, "~/Desktop/scratch/dbdb_work/processed_data/og_metadata.csv")
+og_data<-read.csv(og_data, "~/Desktop/scratch/dbdb_work/processed_data/og_data.csv")
+og_metadata<-read.csv(og_metadata, "~/Desktop/scratch/dbdb_work/processed_data/og_metadata.csv")
+
 #Lung mono
-lung_mono_data<-rbind(M429_438, M439_448, M699_713, M744_757, M769_825)%>%
-  filter(LOD == "No")
-write.csv(lung_mono_data, "~/Desktop/scratch/dbdb_work/processed_data/lung_mono_data.csv")
+lung_mono_data<-read.csv(lung_mono_data, "~/Desktop/scratch/dbdb_work/processed_data/lung_mono_data.csv")
 
 lung_mono_data_high<-rbind(M429_438, M439_448, M699_713, M744_757)%>%
   filter(LOD == "No") %>%
@@ -128,22 +34,9 @@ lung_mono_data_low<-rbind(M769_825)%>%
   mutate(mean_log_CFU_per_g_total = mean(log_CFU_per_g_total)) %>%
   mutate(mean_log_CFU_per_mL = mean(log_CFU_per_mL))%>%
   ungroup()
+
 #Lung competative
-lung_glta_data_cfu<-rbind(M594_603, M614_628)%>%
-  filter(LOD == "No") %>%
-  mutate(log_CFU_per_g_strain = log(CFU_per_g_strain, 10))%>%
-  mutate(log_CFU_per_mL_strain = log(CFU_per_mL_strain, 10)) %>%
-  group_by(Genotype, Tissue, Kp_strain_ref)%>%
-  mutate(mean_log_CFU_per_g_strain = mean(log_CFU_per_g_strain))%>%
-  mutate(mean_log_CFU_per_mL_strain = mean(log_CFU_per_mL_strain))%>%
-  ungroup()
-lung_glta_data<-rbind(M594_603, M614_628)%>%
-  filter(LOD == "No") %>%
-  filter(!is.na(Log_CI)) %>%
-  group_by(Genotype, Tissue)%>%
-  mutate(mean_Log_CI = mean(Log_CI))%>%
-  ungroup()
-write.csv(lung_glta_data_cfu, "~/Desktop/scratch/dbdb_work/processed_data/lung_glta_data.csv")
+lung_glta_data_cfu<-read.csv(lung_glta_data_cfu, "~/Desktop/scratch/dbdb_work/processed_data/lung_glta_data.csv")
 #===================================================================
 # define aesthetics ##################################
 strain_2_levels<-c("JV1", "JV432")
