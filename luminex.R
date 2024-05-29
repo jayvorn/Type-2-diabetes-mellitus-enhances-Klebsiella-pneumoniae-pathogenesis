@@ -21,23 +21,8 @@ colors<-c("red","black")
 #===================================================================
 # import data #################################
 #Pneumonia KPPR1 only: M429-448 (20), M699-713 (14 - no 709), M744_757 (14 - includes controls)
-M429_438<-read_xlsx("~/Desktop/scratch/dbdb_work/raw_data/20231026_M429_438.xlsx") %>%
-  select(Condition, Sample, CFU_per_g_total,Tissue, Sample_weight_mg, Genotype) %>%
-  filter(Sample != "Inoculum") %>%
-  filter(Tissue == "lung") 
-M439_448<-read_xlsx("~/Desktop/scratch/dbdb_work/raw_data/20231102_M439_448.xlsx") %>%
-  select(Condition, Sample, CFU_per_g_total,Tissue, Sample_weight_mg, Genotype) %>%
-  filter(Sample != "Inoculum") %>%
-  filter(Tissue == "lung") 
-M699_713<-read_xlsx("~/Desktop/scratch/dbdb_work/raw_data/20240221_M699_713.xlsx") %>%
-  select(Condition, Sample, CFU_per_g_total,Tissue, Sample_weight_mg, Genotype) %>%
-  filter(Sample != "Inoculum") %>%
-  filter(Tissue == "lung") 
-M744_757<-read_xlsx("~/Desktop/scratch/dbdb_work/raw_data/20240315_M744_757.xlsx") %>%
-  select(Condition, Sample, CFU_per_g_total,Tissue, Sample_weight_mg, Genotype) %>%
-  filter(Sample != "Inoculum") %>%
-  filter(Tissue == "lung") 
-lung_mono_data<-rbind(M429_438, M439_448, M699_713, M744_757)
+#Lung mono
+lung_mono_data<-read.csv(lung_mono_data, "~/Desktop/scratch/dbdb_work/processed_data/lung_mono_data.csv")
 # luminex data
 luminex_data<-read_xlsx("~/Desktop/scratch/dbdb_work/raw_data/20240315_lung_luminex_final.xlsx") %>%
   rename(Sample = 'Sample ID') 
