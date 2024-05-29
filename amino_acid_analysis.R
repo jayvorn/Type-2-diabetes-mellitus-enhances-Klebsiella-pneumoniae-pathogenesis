@@ -22,22 +22,7 @@ genotype_3_shapes<-c(22,21,24)
 genotype_3_colors<-c("black","#5F4B8B","#AD5E99")
 #===================================================================
 # import data ##################################
-M779_795_aa<-read_xlsx("~/Desktop/scratch/dbdb_work/raw_data/AA_batch_4_29_24_final.xlsx", sheet = "processed_data") %>%
-  select(-genotype) %>%
-  pivot_longer(!sample, names_to ="aa", values_to = "ug_aa_per_ug_protein")
-M779_795_key<-read_xlsx("~/Desktop/scratch/dbdb_work/raw_data/AA_batch_4_29_24_final.xlsx", sheet = "processed_data") %>%
-  select(sample, genotype)
-M779_795_LOD<-read_xlsx("~/Desktop/scratch/dbdb_work/raw_data/AA_batch_4_29_24_final.xlsx", sheet = "raw_data") %>%
-  select(`Amino Acid`, LOD_pass) %>%
-  rename(aa = `Amino Acid`)
-M779_795<-left_join(M779_795_key, M779_795_aa, by = "sample", relationship = "many-to-many") %>%
-  left_join(., M779_795_LOD, by = "aa", relationship = "many-to-many")
-M779_795 %>%
-  filter(LOD_pass > 6) %>%
-  select(sample, aa, ug_aa_per_ug_protein)%>%
-  pivot_wider(names_from=aa,values_from=ug_aa_per_ug_protein)%>%
-  column_to_rownames("sample") %>%
-  write.csv(file = "processed_data/balf_aa.csv")
+M779_795 <-read.csv(file = "processed_data/balf_aa.csv")
 #===================================================================
 # run stats ##################################
 aa_pvals <- M779_795%>%
