@@ -1,0 +1,21 @@
+#!/bin/bash
+
+#SBATCH --job-name=all_en
+#SBATCH -A r00577
+#SBATCH --mail-type=all
+#SBATCH --mail-user=jayvornh@iu.edu
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=1
+#SBATCH --mem=128g
+#SBATCH --cpus-per-task=12
+#SBATCH --time=96:00:00
+#SBATCH -p general
+#SBATCH --array 1-100
+
+module load r
+module load hdf5
+
+SEED=$((SLURM_ARRAY_TASK_ID))
+echo = $SEED
+
+make processed_data/otu_corr_en_results_$SEED.Rds

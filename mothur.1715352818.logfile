@@ -1,0 +1,2295 @@
+Mac version
+
+Using ReadLine,Boost,HDF5,GSL
+mothur v.1.48.0
+Last updated: 5/20/22
+by
+Patrick D. Schloss
+
+Department of Microbiology & Immunology
+
+University of Michigan
+http://www.mothur.org
+
+When using, please cite:
+Schloss, P.D., et al., Introducing mothur: Open-source, platform-independent, community-supported software for describing and comparing microbial communities. Appl Environ Microbiol, 2009. 75(23):7537-41.
+
+Distributed under the GNU General Public License
+
+Type 'help()' for information on the commands that are available
+
+For questions and analysis support, please visit our forum at https://forum.mothur.org
+
+Type 'quit()' to exit program
+
+[NOTE]: Setting random seed to 19760620.
+
+Batch Mode
+
+
+
+mothur > system(echo 'Hi Jay! I hope this goes well!')
+Hi Jay! I hope this goes well!
+
+
+mothur > set.seed(seed=20220212)
+Setting random seed to 20220212.
+
+Setting random seed to 20220212.
+
+
+mothur > set.dir(input=/Users/jayvornh/Desktop/mothur_dbdb/processing)
+Mothur's directories:
+inputdir=
+	/Users/jayvornh/Desktop/mothur_dbdb/processing/
+
+
+mothur > set.dir(output=/Users/jayvornh/Desktop/mothur_dbdb/processing)
+Mothur's directories:
+outputDir=/Users/jayvornh/Desktop/mothur_dbdb/processing/
+
+mothur > make.file(inputdir=/Users/jayvornh/Desktop/mothur_dbdb/reads,type=fastq,prefix=dbdb)
+Setting input directories to: 
+	/Users/jayvornh/Desktop/mothur_dbdb/reads/
+
+
+Output File Names: 
+/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.files
+
+
+mothur > get.mimarkspackage(file=dbdb.files, package=miscellaneous)
+Unable to open dbdb.files. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/dbdb.files.
+Unable to open /Users/jayvornh/Desktop/mothur_dbdb/reads/dbdb.files. Trying output directory /Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.files.
+Unable to open M294_S1_L001_R1_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M294_S1_L001_R1_001.fastq.
+Unable to open M294_S1_L001_R2_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M294_S1_L001_R2_001.fastq.
+Unable to open M295_S2_L001_R1_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M295_S2_L001_R1_001.fastq.
+Unable to open M295_S2_L001_R2_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M295_S2_L001_R2_001.fastq.
+Unable to open M296_S3_L001_R1_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M296_S3_L001_R1_001.fastq.
+Unable to open M296_S3_L001_R2_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M296_S3_L001_R2_001.fastq.
+Unable to open M297_S4_L001_R1_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M297_S4_L001_R1_001.fastq.
+Unable to open M297_S4_L001_R2_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M297_S4_L001_R2_001.fastq.
+Unable to open M298_S5_L001_R1_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M298_S5_L001_R1_001.fastq.
+Unable to open M298_S5_L001_R2_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M298_S5_L001_R2_001.fastq.
+Unable to open M299_S6_L001_R1_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M299_S6_L001_R1_001.fastq.
+Unable to open M299_S6_L001_R2_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M299_S6_L001_R2_001.fastq.
+Unable to open M300_S7_L001_R1_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M300_S7_L001_R1_001.fastq.
+Unable to open M300_S7_L001_R2_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M300_S7_L001_R2_001.fastq.
+Unable to open M301_S8_L001_R1_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M301_S8_L001_R1_001.fastq.
+Unable to open M301_S8_L001_R2_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M301_S8_L001_R2_001.fastq.
+Unable to open M302_S9_L001_R1_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M302_S9_L001_R1_001.fastq.
+Unable to open M302_S9_L001_R2_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M302_S9_L001_R2_001.fastq.
+Unable to open M303_S10_L001_R1_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M303_S10_L001_R1_001.fastq.
+Unable to open M303_S10_L001_R2_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M303_S10_L001_R2_001.fastq.
+Unable to open M324_S11_L001_R1_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M324_S11_L001_R1_001.fastq.
+Unable to open M324_S11_L001_R2_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M324_S11_L001_R2_001.fastq.
+Unable to open M325_S12_L001_R1_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M325_S12_L001_R1_001.fastq.
+Unable to open M325_S12_L001_R2_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M325_S12_L001_R2_001.fastq.
+Unable to open M326_S13_L001_R1_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M326_S13_L001_R1_001.fastq.
+Unable to open M326_S13_L001_R2_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M326_S13_L001_R2_001.fastq.
+Unable to open M327_S14_L001_R1_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M327_S14_L001_R1_001.fastq.
+Unable to open M327_S14_L001_R2_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M327_S14_L001_R2_001.fastq.
+Unable to open M328_S15_L001_R1_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M328_S15_L001_R1_001.fastq.
+Unable to open M328_S15_L001_R2_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M328_S15_L001_R2_001.fastq.
+Unable to open M329_S16_L001_R1_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M329_S16_L001_R1_001.fastq.
+Unable to open M329_S16_L001_R2_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M329_S16_L001_R2_001.fastq.
+Unable to open M330_S17_L001_R1_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M330_S17_L001_R1_001.fastq.
+Unable to open M330_S17_L001_R2_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M330_S17_L001_R2_001.fastq.
+Unable to open M331_S18_L001_R1_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M331_S18_L001_R1_001.fastq.
+Unable to open M331_S18_L001_R2_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M331_S18_L001_R2_001.fastq.
+Unable to open M332_S19_L001_R1_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M332_S19_L001_R1_001.fastq.
+Unable to open M332_S19_L001_R2_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M332_S19_L001_R2_001.fastq.
+Unable to open M333_S20_L001_R1_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M333_S20_L001_R1_001.fastq.
+Unable to open M333_S20_L001_R2_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M333_S20_L001_R2_001.fastq.
+Unable to open M544_S30_L001_R1_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M544_S30_L001_R1_001.fastq.
+Unable to open M544_S30_L001_R2_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M544_S30_L001_R2_001.fastq.
+Unable to open M545_S31_L001_R1_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M545_S31_L001_R1_001.fastq.
+Unable to open M545_S31_L001_R2_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M545_S31_L001_R2_001.fastq.
+Unable to open M546_S32_L001_R1_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M546_S32_L001_R1_001.fastq.
+Unable to open M546_S32_L001_R2_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M546_S32_L001_R2_001.fastq.
+Unable to open M547_S33_L001_R1_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M547_S33_L001_R1_001.fastq.
+Unable to open M547_S33_L001_R2_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M547_S33_L001_R2_001.fastq.
+Unable to open M548_S34_L001_R1_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M548_S34_L001_R1_001.fastq.
+Unable to open M548_S34_L001_R2_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M548_S34_L001_R2_001.fastq.
+Unable to open M549_S35_L001_R1_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M549_S35_L001_R1_001.fastq.
+Unable to open M549_S35_L001_R2_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M549_S35_L001_R2_001.fastq.
+Unable to open M550_S36_L001_R1_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M550_S36_L001_R1_001.fastq.
+Unable to open M550_S36_L001_R2_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M550_S36_L001_R2_001.fastq.
+Unable to open M551_S37_L001_R1_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M551_S37_L001_R1_001.fastq.
+Unable to open M551_S37_L001_R2_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M551_S37_L001_R2_001.fastq.
+Unable to open M552_S38_L001_R1_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M552_S38_L001_R1_001.fastq.
+Unable to open M552_S38_L001_R2_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M552_S38_L001_R2_001.fastq.
+Unable to open M553_S39_L001_R1_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M553_S39_L001_R1_001.fastq.
+Unable to open M553_S39_L001_R2_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M553_S39_L001_R2_001.fastq.
+Unable to open M604_S40_L001_R1_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M604_S40_L001_R1_001.fastq.
+Unable to open M604_S40_L001_R2_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M604_S40_L001_R2_001.fastq.
+Unable to open M605_S41_L001_R1_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M605_S41_L001_R1_001.fastq.
+Unable to open M605_S41_L001_R2_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M605_S41_L001_R2_001.fastq.
+Unable to open M606_S42_L001_R1_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M606_S42_L001_R1_001.fastq.
+Unable to open M606_S42_L001_R2_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M606_S42_L001_R2_001.fastq.
+Unable to open M607_S43_L001_R1_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M607_S43_L001_R1_001.fastq.
+Unable to open M607_S43_L001_R2_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M607_S43_L001_R2_001.fastq.
+Unable to open M608_S44_L001_R1_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M608_S44_L001_R1_001.fastq.
+Unable to open M608_S44_L001_R2_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M608_S44_L001_R2_001.fastq.
+Unable to open M609_S45_L001_R1_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M609_S45_L001_R1_001.fastq.
+Unable to open M609_S45_L001_R2_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M609_S45_L001_R2_001.fastq.
+Unable to open M610_S46_L001_R1_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M610_S46_L001_R1_001.fastq.
+Unable to open M610_S46_L001_R2_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M610_S46_L001_R2_001.fastq.
+Unable to open M612_S48_L001_R1_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M612_S48_L001_R1_001.fastq.
+Unable to open M612_S48_L001_R2_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M612_S48_L001_R2_001.fastq.
+Unable to open M613_S49_L001_R1_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M613_S49_L001_R1_001.fastq.
+Unable to open M613_S49_L001_R2_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M613_S49_L001_R2_001.fastq.
+Unable to open M629_S50_L001_R1_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M629_S50_L001_R1_001.fastq.
+Unable to open M629_S50_L001_R2_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M629_S50_L001_R2_001.fastq.
+Unable to open M630_S51_L001_R1_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M630_S51_L001_R1_001.fastq.
+Unable to open M630_S51_L001_R2_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M630_S51_L001_R2_001.fastq.
+Unable to open M631_S52_L001_R1_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M631_S52_L001_R1_001.fastq.
+Unable to open M631_S52_L001_R2_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M631_S52_L001_R2_001.fastq.
+Unable to open M632_S53_L001_R1_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M632_S53_L001_R1_001.fastq.
+Unable to open M632_S53_L001_R2_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M632_S53_L001_R2_001.fastq.
+Unable to open M633_S54_L001_R1_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M633_S54_L001_R1_001.fastq.
+Unable to open M633_S54_L001_R2_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M633_S54_L001_R2_001.fastq.
+Unable to open M634_S55_L001_R1_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M634_S55_L001_R1_001.fastq.
+Unable to open M634_S55_L001_R2_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M634_S55_L001_R2_001.fastq.
+Unable to open M635_S56_L001_R1_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M635_S56_L001_R1_001.fastq.
+Unable to open M635_S56_L001_R2_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M635_S56_L001_R2_001.fastq.
+Unable to open M636_S57_L001_R1_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M636_S57_L001_R1_001.fastq.
+Unable to open M636_S57_L001_R2_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M636_S57_L001_R2_001.fastq.
+Unable to open M637_S58_L001_R1_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M637_S58_L001_R1_001.fastq.
+Unable to open M637_S58_L001_R2_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M637_S58_L001_R2_001.fastq.
+Unable to open M689_S60_L001_R1_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M689_S60_L001_R1_001.fastq.
+Unable to open M689_S60_L001_R2_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M689_S60_L001_R2_001.fastq.
+Unable to open M690_S61_L001_R1_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M690_S61_L001_R1_001.fastq.
+Unable to open M690_S61_L001_R2_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M690_S61_L001_R2_001.fastq.
+Unable to open M693_S62_L001_R1_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M693_S62_L001_R1_001.fastq.
+Unable to open M693_S62_L001_R2_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M693_S62_L001_R2_001.fastq.
+Unable to open M696_S63_L001_R1_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M696_S63_L001_R1_001.fastq.
+Unable to open M696_S63_L001_R2_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M696_S63_L001_R2_001.fastq.
+Unable to open ZYMO_S95_L001_R1_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/ZYMO_S95_L001_R1_001.fastq.
+Unable to open ZYMO_S95_L001_R2_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/ZYMO_S95_L001_R2_001.fastq.
+
+Output File Names: 
+/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.tsv
+
+
+mothur > rename.file(input=dbdb.tsv, new=dbdb_mimarks_template.tsv)
+Unable to open dbdb.tsv. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/dbdb.tsv.
+Unable to open /Users/jayvornh/Desktop/mothur_dbdb/reads/dbdb.tsv. Trying output directory /Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.tsv.
+
+Current files saved by mothur:
+processors=10
+file=/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.files
+
+mothur > system(echo 'LLLLEEEEETTTTSSSSS MAKE SOME CONTTTIIIIGGGGSSSSSS')
+LLLLEEEEETTTTSSSSS MAKE SOME CONTTTIIIIGGGGSSSSSS
+
+
+mothur > make.contigs(file=dbdb.files, maxambig=0, maxlength=275, maxhomop=8)
+Unable to open dbdb.files. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/dbdb.files.
+Unable to open /Users/jayvornh/Desktop/mothur_dbdb/reads/dbdb.files. Trying output directory /Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.files.
+
+Using 10 processors.
+Unable to open M294_S1_L001_R1_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M294_S1_L001_R1_001.fastq.
+Unable to open M294_S1_L001_R2_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M294_S1_L001_R2_001.fastq.
+Unable to open M295_S2_L001_R1_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M295_S2_L001_R1_001.fastq.
+Unable to open M295_S2_L001_R2_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M295_S2_L001_R2_001.fastq.
+Unable to open M296_S3_L001_R1_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M296_S3_L001_R1_001.fastq.
+Unable to open M296_S3_L001_R2_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M296_S3_L001_R2_001.fastq.
+Unable to open M297_S4_L001_R1_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M297_S4_L001_R1_001.fastq.
+Unable to open M297_S4_L001_R2_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M297_S4_L001_R2_001.fastq.
+Unable to open M298_S5_L001_R1_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M298_S5_L001_R1_001.fastq.
+Unable to open M298_S5_L001_R2_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M298_S5_L001_R2_001.fastq.
+Unable to open M299_S6_L001_R1_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M299_S6_L001_R1_001.fastq.
+Unable to open M299_S6_L001_R2_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M299_S6_L001_R2_001.fastq.
+Unable to open M300_S7_L001_R1_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M300_S7_L001_R1_001.fastq.
+Unable to open M300_S7_L001_R2_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M300_S7_L001_R2_001.fastq.
+Unable to open M301_S8_L001_R1_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M301_S8_L001_R1_001.fastq.
+Unable to open M301_S8_L001_R2_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M301_S8_L001_R2_001.fastq.
+Unable to open M302_S9_L001_R1_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M302_S9_L001_R1_001.fastq.
+Unable to open M302_S9_L001_R2_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M302_S9_L001_R2_001.fastq.
+Unable to open M303_S10_L001_R1_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M303_S10_L001_R1_001.fastq.
+Unable to open M303_S10_L001_R2_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M303_S10_L001_R2_001.fastq.
+Unable to open M324_S11_L001_R1_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M324_S11_L001_R1_001.fastq.
+Unable to open M324_S11_L001_R2_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M324_S11_L001_R2_001.fastq.
+Unable to open M325_S12_L001_R1_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M325_S12_L001_R1_001.fastq.
+Unable to open M325_S12_L001_R2_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M325_S12_L001_R2_001.fastq.
+Unable to open M326_S13_L001_R1_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M326_S13_L001_R1_001.fastq.
+Unable to open M326_S13_L001_R2_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M326_S13_L001_R2_001.fastq.
+Unable to open M327_S14_L001_R1_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M327_S14_L001_R1_001.fastq.
+Unable to open M327_S14_L001_R2_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M327_S14_L001_R2_001.fastq.
+Unable to open M328_S15_L001_R1_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M328_S15_L001_R1_001.fastq.
+Unable to open M328_S15_L001_R2_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M328_S15_L001_R2_001.fastq.
+Unable to open M329_S16_L001_R1_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M329_S16_L001_R1_001.fastq.
+Unable to open M329_S16_L001_R2_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M329_S16_L001_R2_001.fastq.
+Unable to open M330_S17_L001_R1_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M330_S17_L001_R1_001.fastq.
+Unable to open M330_S17_L001_R2_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M330_S17_L001_R2_001.fastq.
+Unable to open M331_S18_L001_R1_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M331_S18_L001_R1_001.fastq.
+Unable to open M331_S18_L001_R2_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M331_S18_L001_R2_001.fastq.
+Unable to open M332_S19_L001_R1_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M332_S19_L001_R1_001.fastq.
+Unable to open M332_S19_L001_R2_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M332_S19_L001_R2_001.fastq.
+Unable to open M333_S20_L001_R1_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M333_S20_L001_R1_001.fastq.
+Unable to open M333_S20_L001_R2_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M333_S20_L001_R2_001.fastq.
+Unable to open M544_S30_L001_R1_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M544_S30_L001_R1_001.fastq.
+Unable to open M544_S30_L001_R2_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M544_S30_L001_R2_001.fastq.
+Unable to open M545_S31_L001_R1_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M545_S31_L001_R1_001.fastq.
+Unable to open M545_S31_L001_R2_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M545_S31_L001_R2_001.fastq.
+Unable to open M546_S32_L001_R1_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M546_S32_L001_R1_001.fastq.
+Unable to open M546_S32_L001_R2_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M546_S32_L001_R2_001.fastq.
+Unable to open M547_S33_L001_R1_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M547_S33_L001_R1_001.fastq.
+Unable to open M547_S33_L001_R2_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M547_S33_L001_R2_001.fastq.
+Unable to open M548_S34_L001_R1_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M548_S34_L001_R1_001.fastq.
+Unable to open M548_S34_L001_R2_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M548_S34_L001_R2_001.fastq.
+Unable to open M549_S35_L001_R1_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M549_S35_L001_R1_001.fastq.
+Unable to open M549_S35_L001_R2_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M549_S35_L001_R2_001.fastq.
+Unable to open M550_S36_L001_R1_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M550_S36_L001_R1_001.fastq.
+Unable to open M550_S36_L001_R2_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M550_S36_L001_R2_001.fastq.
+Unable to open M551_S37_L001_R1_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M551_S37_L001_R1_001.fastq.
+Unable to open M551_S37_L001_R2_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M551_S37_L001_R2_001.fastq.
+Unable to open M552_S38_L001_R1_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M552_S38_L001_R1_001.fastq.
+Unable to open M552_S38_L001_R2_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M552_S38_L001_R2_001.fastq.
+Unable to open M553_S39_L001_R1_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M553_S39_L001_R1_001.fastq.
+Unable to open M553_S39_L001_R2_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M553_S39_L001_R2_001.fastq.
+Unable to open M604_S40_L001_R1_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M604_S40_L001_R1_001.fastq.
+Unable to open M604_S40_L001_R2_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M604_S40_L001_R2_001.fastq.
+Unable to open M605_S41_L001_R1_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M605_S41_L001_R1_001.fastq.
+Unable to open M605_S41_L001_R2_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M605_S41_L001_R2_001.fastq.
+Unable to open M606_S42_L001_R1_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M606_S42_L001_R1_001.fastq.
+Unable to open M606_S42_L001_R2_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M606_S42_L001_R2_001.fastq.
+Unable to open M607_S43_L001_R1_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M607_S43_L001_R1_001.fastq.
+Unable to open M607_S43_L001_R2_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M607_S43_L001_R2_001.fastq.
+Unable to open M608_S44_L001_R1_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M608_S44_L001_R1_001.fastq.
+Unable to open M608_S44_L001_R2_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M608_S44_L001_R2_001.fastq.
+Unable to open M609_S45_L001_R1_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M609_S45_L001_R1_001.fastq.
+Unable to open M609_S45_L001_R2_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M609_S45_L001_R2_001.fastq.
+Unable to open M610_S46_L001_R1_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M610_S46_L001_R1_001.fastq.
+Unable to open M610_S46_L001_R2_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M610_S46_L001_R2_001.fastq.
+Unable to open M612_S48_L001_R1_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M612_S48_L001_R1_001.fastq.
+Unable to open M612_S48_L001_R2_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M612_S48_L001_R2_001.fastq.
+Unable to open M613_S49_L001_R1_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M613_S49_L001_R1_001.fastq.
+Unable to open M613_S49_L001_R2_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M613_S49_L001_R2_001.fastq.
+Unable to open M629_S50_L001_R1_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M629_S50_L001_R1_001.fastq.
+Unable to open M629_S50_L001_R2_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M629_S50_L001_R2_001.fastq.
+Unable to open M630_S51_L001_R1_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M630_S51_L001_R1_001.fastq.
+Unable to open M630_S51_L001_R2_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M630_S51_L001_R2_001.fastq.
+Unable to open M631_S52_L001_R1_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M631_S52_L001_R1_001.fastq.
+Unable to open M631_S52_L001_R2_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M631_S52_L001_R2_001.fastq.
+Unable to open M632_S53_L001_R1_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M632_S53_L001_R1_001.fastq.
+Unable to open M632_S53_L001_R2_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M632_S53_L001_R2_001.fastq.
+Unable to open M633_S54_L001_R1_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M633_S54_L001_R1_001.fastq.
+Unable to open M633_S54_L001_R2_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M633_S54_L001_R2_001.fastq.
+Unable to open M634_S55_L001_R1_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M634_S55_L001_R1_001.fastq.
+Unable to open M634_S55_L001_R2_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M634_S55_L001_R2_001.fastq.
+Unable to open M635_S56_L001_R1_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M635_S56_L001_R1_001.fastq.
+Unable to open M635_S56_L001_R2_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M635_S56_L001_R2_001.fastq.
+Unable to open M636_S57_L001_R1_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M636_S57_L001_R1_001.fastq.
+Unable to open M636_S57_L001_R2_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M636_S57_L001_R2_001.fastq.
+Unable to open M637_S58_L001_R1_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M637_S58_L001_R1_001.fastq.
+Unable to open M637_S58_L001_R2_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M637_S58_L001_R2_001.fastq.
+Unable to open M689_S60_L001_R1_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M689_S60_L001_R1_001.fastq.
+Unable to open M689_S60_L001_R2_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M689_S60_L001_R2_001.fastq.
+Unable to open M690_S61_L001_R1_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M690_S61_L001_R1_001.fastq.
+Unable to open M690_S61_L001_R2_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M690_S61_L001_R2_001.fastq.
+Unable to open M693_S62_L001_R1_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M693_S62_L001_R1_001.fastq.
+Unable to open M693_S62_L001_R2_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M693_S62_L001_R2_001.fastq.
+Unable to open M696_S63_L001_R1_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M696_S63_L001_R1_001.fastq.
+Unable to open M696_S63_L001_R2_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/M696_S63_L001_R2_001.fastq.
+Unable to open ZYMO_S95_L001_R1_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/ZYMO_S95_L001_R1_001.fastq.
+Unable to open ZYMO_S95_L001_R2_001.fastq. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/reads/ZYMO_S95_L001_R2_001.fastq.
+
+>>>>>	Processing file pair /Users/jayvornh/Desktop/mothur_dbdb/reads/M294_S1_L001_R1_001.fastq - /Users/jayvornh/Desktop/mothur_dbdb/reads/M294_S1_L001_R2_001.fastq (files 1 of 53)	<<<<<
+Making contigs...
+Done.
+
+It took 1 secs to assemble 9551 reads.
+
+
+>>>>>	Processing file pair /Users/jayvornh/Desktop/mothur_dbdb/reads/M295_S2_L001_R1_001.fastq - /Users/jayvornh/Desktop/mothur_dbdb/reads/M295_S2_L001_R2_001.fastq (files 2 of 53)	<<<<<
+Making contigs...
+Done.
+
+It took 1 secs to assemble 7688 reads.
+
+
+>>>>>	Processing file pair /Users/jayvornh/Desktop/mothur_dbdb/reads/M296_S3_L001_R1_001.fastq - /Users/jayvornh/Desktop/mothur_dbdb/reads/M296_S3_L001_R2_001.fastq (files 3 of 53)	<<<<<
+Making contigs...
+Done.
+
+It took 1 secs to assemble 6127 reads.
+
+
+>>>>>	Processing file pair /Users/jayvornh/Desktop/mothur_dbdb/reads/M297_S4_L001_R1_001.fastq - /Users/jayvornh/Desktop/mothur_dbdb/reads/M297_S4_L001_R2_001.fastq (files 4 of 53)	<<<<<
+Making contigs...
+Done.
+
+It took 1 secs to assemble 15099 reads.
+
+
+>>>>>	Processing file pair /Users/jayvornh/Desktop/mothur_dbdb/reads/M298_S5_L001_R1_001.fastq - /Users/jayvornh/Desktop/mothur_dbdb/reads/M298_S5_L001_R2_001.fastq (files 5 of 53)	<<<<<
+Making contigs...
+Done.
+
+It took 2 secs to assemble 10505 reads.
+
+
+>>>>>	Processing file pair /Users/jayvornh/Desktop/mothur_dbdb/reads/M299_S6_L001_R1_001.fastq - /Users/jayvornh/Desktop/mothur_dbdb/reads/M299_S6_L001_R2_001.fastq (files 6 of 53)	<<<<<
+Making contigs...
+Done.
+
+It took 0 secs to assemble 6335 reads.
+
+
+>>>>>	Processing file pair /Users/jayvornh/Desktop/mothur_dbdb/reads/M300_S7_L001_R1_001.fastq - /Users/jayvornh/Desktop/mothur_dbdb/reads/M300_S7_L001_R2_001.fastq (files 7 of 53)	<<<<<
+Making contigs...
+Done.
+
+It took 2 secs to assemble 8730 reads.
+
+
+>>>>>	Processing file pair /Users/jayvornh/Desktop/mothur_dbdb/reads/M301_S8_L001_R1_001.fastq - /Users/jayvornh/Desktop/mothur_dbdb/reads/M301_S8_L001_R2_001.fastq (files 8 of 53)	<<<<<
+Making contigs...
+Done.
+
+It took 1 secs to assemble 9388 reads.
+
+
+>>>>>	Processing file pair /Users/jayvornh/Desktop/mothur_dbdb/reads/M302_S9_L001_R1_001.fastq - /Users/jayvornh/Desktop/mothur_dbdb/reads/M302_S9_L001_R2_001.fastq (files 9 of 53)	<<<<<
+Making contigs...
+Done.
+
+It took 1 secs to assemble 8660 reads.
+
+
+>>>>>	Processing file pair /Users/jayvornh/Desktop/mothur_dbdb/reads/M303_S10_L001_R1_001.fastq - /Users/jayvornh/Desktop/mothur_dbdb/reads/M303_S10_L001_R2_001.fastq (files 10 of 53)	<<<<<
+Making contigs...
+Done.
+
+It took 0 secs to assemble 2309 reads.
+
+
+>>>>>	Processing file pair /Users/jayvornh/Desktop/mothur_dbdb/reads/M324_S11_L001_R1_001.fastq - /Users/jayvornh/Desktop/mothur_dbdb/reads/M324_S11_L001_R2_001.fastq (files 11 of 53)	<<<<<
+Making contigs...
+Done.
+
+It took 1 secs to assemble 7629 reads.
+
+
+>>>>>	Processing file pair /Users/jayvornh/Desktop/mothur_dbdb/reads/M325_S12_L001_R1_001.fastq - /Users/jayvornh/Desktop/mothur_dbdb/reads/M325_S12_L001_R2_001.fastq (files 12 of 53)	<<<<<
+Making contigs...
+Done.
+
+It took 1 secs to assemble 6987 reads.
+
+
+>>>>>	Processing file pair /Users/jayvornh/Desktop/mothur_dbdb/reads/M326_S13_L001_R1_001.fastq - /Users/jayvornh/Desktop/mothur_dbdb/reads/M326_S13_L001_R2_001.fastq (files 13 of 53)	<<<<<
+Making contigs...
+Done.
+
+It took 1 secs to assemble 11159 reads.
+
+
+>>>>>	Processing file pair /Users/jayvornh/Desktop/mothur_dbdb/reads/M327_S14_L001_R1_001.fastq - /Users/jayvornh/Desktop/mothur_dbdb/reads/M327_S14_L001_R2_001.fastq (files 14 of 53)	<<<<<
+Making contigs...
+Done.
+
+It took 1 secs to assemble 10247 reads.
+
+
+>>>>>	Processing file pair /Users/jayvornh/Desktop/mothur_dbdb/reads/M328_S15_L001_R1_001.fastq - /Users/jayvornh/Desktop/mothur_dbdb/reads/M328_S15_L001_R2_001.fastq (files 15 of 53)	<<<<<
+Making contigs...
+Done.
+
+It took 1 secs to assemble 9796 reads.
+
+
+>>>>>	Processing file pair /Users/jayvornh/Desktop/mothur_dbdb/reads/M329_S16_L001_R1_001.fastq - /Users/jayvornh/Desktop/mothur_dbdb/reads/M329_S16_L001_R2_001.fastq (files 16 of 53)	<<<<<
+Making contigs...
+Done.
+
+It took 2 secs to assemble 11471 reads.
+
+
+>>>>>	Processing file pair /Users/jayvornh/Desktop/mothur_dbdb/reads/M330_S17_L001_R1_001.fastq - /Users/jayvornh/Desktop/mothur_dbdb/reads/M330_S17_L001_R2_001.fastq (files 17 of 53)	<<<<<
+Making contigs...
+Done.
+
+It took 1 secs to assemble 9732 reads.
+
+
+>>>>>	Processing file pair /Users/jayvornh/Desktop/mothur_dbdb/reads/M331_S18_L001_R1_001.fastq - /Users/jayvornh/Desktop/mothur_dbdb/reads/M331_S18_L001_R2_001.fastq (files 18 of 53)	<<<<<
+Making contigs...
+Done.
+
+It took 1 secs to assemble 7352 reads.
+
+
+>>>>>	Processing file pair /Users/jayvornh/Desktop/mothur_dbdb/reads/M332_S19_L001_R1_001.fastq - /Users/jayvornh/Desktop/mothur_dbdb/reads/M332_S19_L001_R2_001.fastq (files 19 of 53)	<<<<<
+Making contigs...
+Done.
+
+It took 1 secs to assemble 12879 reads.
+
+
+>>>>>	Processing file pair /Users/jayvornh/Desktop/mothur_dbdb/reads/M333_S20_L001_R1_001.fastq - /Users/jayvornh/Desktop/mothur_dbdb/reads/M333_S20_L001_R2_001.fastq (files 20 of 53)	<<<<<
+Making contigs...
+Done.
+
+It took 2 secs to assemble 16337 reads.
+
+
+>>>>>	Processing file pair /Users/jayvornh/Desktop/mothur_dbdb/reads/M544_S30_L001_R1_001.fastq - /Users/jayvornh/Desktop/mothur_dbdb/reads/M544_S30_L001_R2_001.fastq (files 21 of 53)	<<<<<
+Making contigs...
+Done.
+
+It took 1 secs to assemble 7416 reads.
+
+
+>>>>>	Processing file pair /Users/jayvornh/Desktop/mothur_dbdb/reads/M545_S31_L001_R1_001.fastq - /Users/jayvornh/Desktop/mothur_dbdb/reads/M545_S31_L001_R2_001.fastq (files 22 of 53)	<<<<<
+Making contigs...
+Done.
+
+It took 1 secs to assemble 13574 reads.
+
+
+>>>>>	Processing file pair /Users/jayvornh/Desktop/mothur_dbdb/reads/M546_S32_L001_R1_001.fastq - /Users/jayvornh/Desktop/mothur_dbdb/reads/M546_S32_L001_R2_001.fastq (files 23 of 53)	<<<<<
+Making contigs...
+Done.
+
+It took 2 secs to assemble 10130 reads.
+
+
+>>>>>	Processing file pair /Users/jayvornh/Desktop/mothur_dbdb/reads/M547_S33_L001_R1_001.fastq - /Users/jayvornh/Desktop/mothur_dbdb/reads/M547_S33_L001_R2_001.fastq (files 24 of 53)	<<<<<
+Making contigs...
+Done.
+
+It took 0 secs to assemble 4543 reads.
+
+
+>>>>>	Processing file pair /Users/jayvornh/Desktop/mothur_dbdb/reads/M548_S34_L001_R1_001.fastq - /Users/jayvornh/Desktop/mothur_dbdb/reads/M548_S34_L001_R2_001.fastq (files 25 of 53)	<<<<<
+Making contigs...
+Done.
+
+It took 1 secs to assemble 6140 reads.
+
+
+>>>>>	Processing file pair /Users/jayvornh/Desktop/mothur_dbdb/reads/M549_S35_L001_R1_001.fastq - /Users/jayvornh/Desktop/mothur_dbdb/reads/M549_S35_L001_R2_001.fastq (files 26 of 53)	<<<<<
+Making contigs...
+Done.
+
+It took 1 secs to assemble 12446 reads.
+
+
+>>>>>	Processing file pair /Users/jayvornh/Desktop/mothur_dbdb/reads/M550_S36_L001_R1_001.fastq - /Users/jayvornh/Desktop/mothur_dbdb/reads/M550_S36_L001_R2_001.fastq (files 27 of 53)	<<<<<
+Making contigs...
+Done.
+
+It took 2 secs to assemble 15287 reads.
+
+
+>>>>>	Processing file pair /Users/jayvornh/Desktop/mothur_dbdb/reads/M551_S37_L001_R1_001.fastq - /Users/jayvornh/Desktop/mothur_dbdb/reads/M551_S37_L001_R2_001.fastq (files 28 of 53)	<<<<<
+Making contigs...
+Done.
+
+It took 2 secs to assemble 13831 reads.
+
+
+>>>>>	Processing file pair /Users/jayvornh/Desktop/mothur_dbdb/reads/M552_S38_L001_R1_001.fastq - /Users/jayvornh/Desktop/mothur_dbdb/reads/M552_S38_L001_R2_001.fastq (files 29 of 53)	<<<<<
+Making contigs...
+Done.
+
+It took 1 secs to assemble 10178 reads.
+
+
+>>>>>	Processing file pair /Users/jayvornh/Desktop/mothur_dbdb/reads/M553_S39_L001_R1_001.fastq - /Users/jayvornh/Desktop/mothur_dbdb/reads/M553_S39_L001_R2_001.fastq (files 30 of 53)	<<<<<
+Making contigs...
+Done.
+
+It took 2 secs to assemble 17092 reads.
+
+
+>>>>>	Processing file pair /Users/jayvornh/Desktop/mothur_dbdb/reads/M604_S40_L001_R1_001.fastq - /Users/jayvornh/Desktop/mothur_dbdb/reads/M604_S40_L001_R2_001.fastq (files 31 of 53)	<<<<<
+Making contigs...
+Done.
+
+It took 1 secs to assemble 14763 reads.
+
+
+>>>>>	Processing file pair /Users/jayvornh/Desktop/mothur_dbdb/reads/M605_S41_L001_R1_001.fastq - /Users/jayvornh/Desktop/mothur_dbdb/reads/M605_S41_L001_R2_001.fastq (files 32 of 53)	<<<<<
+Making contigs...
+Done.
+
+It took 2 secs to assemble 11816 reads.
+
+
+>>>>>	Processing file pair /Users/jayvornh/Desktop/mothur_dbdb/reads/M606_S42_L001_R1_001.fastq - /Users/jayvornh/Desktop/mothur_dbdb/reads/M606_S42_L001_R2_001.fastq (files 33 of 53)	<<<<<
+Making contigs...
+Done.
+
+It took 1 secs to assemble 10599 reads.
+
+
+>>>>>	Processing file pair /Users/jayvornh/Desktop/mothur_dbdb/reads/M607_S43_L001_R1_001.fastq - /Users/jayvornh/Desktop/mothur_dbdb/reads/M607_S43_L001_R2_001.fastq (files 34 of 53)	<<<<<
+Making contigs...
+Done.
+
+It took 1 secs to assemble 7673 reads.
+
+
+>>>>>	Processing file pair /Users/jayvornh/Desktop/mothur_dbdb/reads/M608_S44_L001_R1_001.fastq - /Users/jayvornh/Desktop/mothur_dbdb/reads/M608_S44_L001_R2_001.fastq (files 35 of 53)	<<<<<
+Making contigs...
+Done.
+
+It took 1 secs to assemble 8356 reads.
+
+
+>>>>>	Processing file pair /Users/jayvornh/Desktop/mothur_dbdb/reads/M609_S45_L001_R1_001.fastq - /Users/jayvornh/Desktop/mothur_dbdb/reads/M609_S45_L001_R2_001.fastq (files 36 of 53)	<<<<<
+Making contigs...
+Done.
+
+It took 1 secs to assemble 7334 reads.
+
+
+>>>>>	Processing file pair /Users/jayvornh/Desktop/mothur_dbdb/reads/M610_S46_L001_R1_001.fastq - /Users/jayvornh/Desktop/mothur_dbdb/reads/M610_S46_L001_R2_001.fastq (files 37 of 53)	<<<<<
+Making contigs...
+Done.
+
+It took 1 secs to assemble 11071 reads.
+
+
+>>>>>	Processing file pair /Users/jayvornh/Desktop/mothur_dbdb/reads/M612_S48_L001_R1_001.fastq - /Users/jayvornh/Desktop/mothur_dbdb/reads/M612_S48_L001_R2_001.fastq (files 38 of 53)	<<<<<
+Making contigs...
+Done.
+
+It took 1 secs to assemble 7832 reads.
+
+
+>>>>>	Processing file pair /Users/jayvornh/Desktop/mothur_dbdb/reads/M613_S49_L001_R1_001.fastq - /Users/jayvornh/Desktop/mothur_dbdb/reads/M613_S49_L001_R2_001.fastq (files 39 of 53)	<<<<<
+Making contigs...
+Done.
+
+It took 1 secs to assemble 11157 reads.
+
+
+>>>>>	Processing file pair /Users/jayvornh/Desktop/mothur_dbdb/reads/M629_S50_L001_R1_001.fastq - /Users/jayvornh/Desktop/mothur_dbdb/reads/M629_S50_L001_R2_001.fastq (files 40 of 53)	<<<<<
+Making contigs...
+Done.
+
+It took 1 secs to assemble 5725 reads.
+
+
+>>>>>	Processing file pair /Users/jayvornh/Desktop/mothur_dbdb/reads/M630_S51_L001_R1_001.fastq - /Users/jayvornh/Desktop/mothur_dbdb/reads/M630_S51_L001_R2_001.fastq (files 41 of 53)	<<<<<
+Making contigs...
+Done.
+
+It took 1 secs to assemble 5793 reads.
+
+
+>>>>>	Processing file pair /Users/jayvornh/Desktop/mothur_dbdb/reads/M631_S52_L001_R1_001.fastq - /Users/jayvornh/Desktop/mothur_dbdb/reads/M631_S52_L001_R2_001.fastq (files 42 of 53)	<<<<<
+Making contigs...
+Done.
+
+It took 1 secs to assemble 9919 reads.
+
+
+>>>>>	Processing file pair /Users/jayvornh/Desktop/mothur_dbdb/reads/M632_S53_L001_R1_001.fastq - /Users/jayvornh/Desktop/mothur_dbdb/reads/M632_S53_L001_R2_001.fastq (files 43 of 53)	<<<<<
+Making contigs...
+Done.
+
+It took 0 secs to assemble 5015 reads.
+
+
+>>>>>	Processing file pair /Users/jayvornh/Desktop/mothur_dbdb/reads/M633_S54_L001_R1_001.fastq - /Users/jayvornh/Desktop/mothur_dbdb/reads/M633_S54_L001_R2_001.fastq (files 44 of 53)	<<<<<
+Making contigs...
+Done.
+
+It took 1 secs to assemble 8827 reads.
+
+
+>>>>>	Processing file pair /Users/jayvornh/Desktop/mothur_dbdb/reads/M634_S55_L001_R1_001.fastq - /Users/jayvornh/Desktop/mothur_dbdb/reads/M634_S55_L001_R2_001.fastq (files 45 of 53)	<<<<<
+Making contigs...
+Done.
+
+It took 1 secs to assemble 7550 reads.
+
+
+>>>>>	Processing file pair /Users/jayvornh/Desktop/mothur_dbdb/reads/M635_S56_L001_R1_001.fastq - /Users/jayvornh/Desktop/mothur_dbdb/reads/M635_S56_L001_R2_001.fastq (files 46 of 53)	<<<<<
+Making contigs...
+Done.
+
+It took 2 secs to assemble 13759 reads.
+
+
+>>>>>	Processing file pair /Users/jayvornh/Desktop/mothur_dbdb/reads/M636_S57_L001_R1_001.fastq - /Users/jayvornh/Desktop/mothur_dbdb/reads/M636_S57_L001_R2_001.fastq (files 47 of 53)	<<<<<
+Making contigs...
+Done.
+
+It took 1 secs to assemble 11677 reads.
+
+
+>>>>>	Processing file pair /Users/jayvornh/Desktop/mothur_dbdb/reads/M637_S58_L001_R1_001.fastq - /Users/jayvornh/Desktop/mothur_dbdb/reads/M637_S58_L001_R2_001.fastq (files 48 of 53)	<<<<<
+Making contigs...
+Done.
+
+It took 2 secs to assemble 12912 reads.
+
+
+>>>>>	Processing file pair /Users/jayvornh/Desktop/mothur_dbdb/reads/M689_S60_L001_R1_001.fastq - /Users/jayvornh/Desktop/mothur_dbdb/reads/M689_S60_L001_R2_001.fastq (files 49 of 53)	<<<<<
+Making contigs...
+Done.
+
+It took 0 secs to assemble 1037 reads.
+
+
+>>>>>	Processing file pair /Users/jayvornh/Desktop/mothur_dbdb/reads/M690_S61_L001_R1_001.fastq - /Users/jayvornh/Desktop/mothur_dbdb/reads/M690_S61_L001_R2_001.fastq (files 50 of 53)	<<<<<
+Making contigs...
+Done.
+
+It took 0 secs to assemble 2622 reads.
+
+
+>>>>>	Processing file pair /Users/jayvornh/Desktop/mothur_dbdb/reads/M693_S62_L001_R1_001.fastq - /Users/jayvornh/Desktop/mothur_dbdb/reads/M693_S62_L001_R2_001.fastq (files 51 of 53)	<<<<<
+Making contigs...
+Done.
+
+It took 1 secs to assemble 2373 reads.
+
+
+>>>>>	Processing file pair /Users/jayvornh/Desktop/mothur_dbdb/reads/M696_S63_L001_R1_001.fastq - /Users/jayvornh/Desktop/mothur_dbdb/reads/M696_S63_L001_R2_001.fastq (files 52 of 53)	<<<<<
+Making contigs...
+Done.
+
+It took 1 secs to assemble 10587 reads.
+
+
+>>>>>	Processing file pair /Users/jayvornh/Desktop/mothur_dbdb/reads/ZYMO_S95_L001_R1_001.fastq - /Users/jayvornh/Desktop/mothur_dbdb/reads/ZYMO_S95_L001_R2_001.fastq (files 53 of 53)	<<<<<
+Making contigs...
+Done.
+
+It took 1 secs to assemble 14777 reads.
+
+
+Group count: 
+M294	8520
+M295	7045
+M296	5648
+M297	13644
+M298	9535
+M299	5754
+M300	7801
+M301	8543
+M302	7739
+M303	2080
+M324	6708
+M325	6004
+M326	9858
+M327	9227
+M328	8865
+M329	10282
+M330	8726
+M331	6745
+M332	11590
+M333	14831
+M544	6978
+M545	12467
+M546	9456
+M547	4225
+M548	5716
+M549	11478
+M550	14253
+M551	13013
+M552	9450
+M553	16209
+M604	13476
+M605	10840
+M606	9655
+M607	6965
+M608	7627
+M609	6666
+M610	10174
+M612	7012
+M613	9805
+M629	5116
+M630	5169
+M631	8744
+M632	4431
+M633	7928
+M634	6540
+M635	12131
+M636	10256
+M637	11605
+M689	893
+M690	2227
+M693	2068
+M696	9829
+ZYMO	12970
+
+Total of all groups is 454517
+
+It took 62 secs to process 501792 sequences.
+
+Output File Names: 
+/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.fasta
+/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.scrap.contigs.fasta
+/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.contigs_report
+/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.contigs.count_table
+
+
+mothur > summary.seqs(fasta=current, count=current)
+Using /Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.contigs.count_table as input file for the count parameter.
+Using /Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.fasta as input file for the fasta parameter.
+
+Using 10 processors.
+
+		Start	End	NBases	Ambigs	Polymer	NumSeqs
+Minimum:	1	250	250	0	3	1
+2.5%-tile:	1	252	252	0	3	11363
+25%-tile:	1	252	252	0	4	113630
+Median: 	1	253	253	0	5	227259
+75%-tile:	1	253	253	0	5	340888
+97.5%-tile:	1	253	253	0	6	443155
+Maximum:	1	255	255	0	8	454517
+Mean:	1	252	252	0	4
+# of unique seqs:	454517
+total # of seqs:	454517
+
+It took 6 secs to summarize 454517 sequences.
+
+Output File Names:
+/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.summary
+
+
+mothur > unique.seqs(fasta=current, count=current)
+Using /Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.contigs.count_table as input file for the count parameter.
+Using /Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.fasta as input file for the fasta parameter.
+454517	50096
+
+Output File Names: 
+/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.fasta
+/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.count_table
+
+
+mothur > system(echo 'Running quality control on sequences...')
+Running quality control on sequences...
+
+
+mothur > pcr.seqs(fasta=silva.seed_v132.align, start=11894, end=25319, keepdots=F, inputdir=/Users/jayvornh/Desktop/mothur_dbdb/silva.seed_v132)
+Setting input directories to: 
+	/Users/jayvornh/Desktop/mothur_dbdb/silva.seed_v132/
+
+
+Using 10 processors.
+[NOTE]: no sequences were bad, removing /Users/jayvornh/Desktop/mothur_dbdb/processing/silva.seed_v132.bad.accnos
+
+It took 2 secs to screen 11180 sequences.
+
+Output File Names: 
+/Users/jayvornh/Desktop/mothur_dbdb/processing/silva.seed_v132.pcr.align
+
+
+
+mothur > rename.file(input=silva.seed_v132.pcr.align, new=silva.v4.fasta)
+Unable to open silva.seed_v132.pcr.align. Trying input directory /Users/jayvornh/Desktop/mothur_dbdb/silva.seed_v132/silva.seed_v132.pcr.align.
+Unable to open /Users/jayvornh/Desktop/mothur_dbdb/silva.seed_v132/silva.seed_v132.pcr.align. Trying output directory /Users/jayvornh/Desktop/mothur_dbdb/processing/silva.seed_v132.pcr.align.
+
+Current files saved by mothur:
+fasta=/Users/jayvornh/Desktop/mothur_dbdb/processing/silva.seed_v132.pcr.align
+contigsreport=/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.contigs_report
+count=/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.count_table
+processors=10
+summary=/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.summary
+file=/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.files
+
+mothur > set.dir(input=/Users/jayvornh/Desktop/mothur_dbdb/processing)
+Mothur's directories:
+inputdir=
+	/Users/jayvornh/Desktop/mothur_dbdb/processing/
+
+
+mothur > align.seqs(fasta=dbdb.trim.contigs.unique.fasta, reference=silva.v4.fasta)
+
+Using 10 processors.
+
+Reading in the /Users/jayvornh/Desktop/mothur_dbdb/processing/silva.v4.fasta template sequences...	DONE.
+It took 2 to read  11180 sequences.
+
+Aligning sequences from /Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.fasta ...
+It took 8 secs to align 50096 sequences.
+
+
+It took 8 seconds to align 50096 sequences.
+
+Output File Names: 
+/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.align
+/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.align_report
+
+
+mothur > screen.seqs(fasta=current, count=current, start=1969, end=11551)
+Using /Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.count_table as input file for the count parameter.
+Using /Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.align as input file for the fasta parameter.
+
+Using 10 processors.
+
+It took 2 secs to screen 50096 sequences, removed 819.
+
+/******************************************/
+Running command: remove.seqs(accnos=/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.bad.accnos.temp, count=/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.count_table)
+Removed 3368 sequences from /Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.count_table.
+
+Output File Names:
+/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.pick.count_table
+
+/******************************************/
+
+Output File Names:
+/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.align
+/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.bad.accnos
+/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.good.count_table
+
+
+It took 3 secs to screen 50096 sequences.
+
+mothur > filter.seqs(fasta=current, vertical=T, trump=.)
+Using /Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.align as input file for the fasta parameter.
+
+Using 10 processors.
+Creating Filter...
+It took 3 secs to create filter for 49277 sequences.
+
+
+Running Filter...
+It took 1 secs to filter 49277 sequences.
+
+
+
+Length of filtered alignment: 402
+Number of columns removed: 13024
+Length of the original alignment: 13426
+Number of sequences used to construct filter: 49277
+
+Output File Names: 
+/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.filter
+/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.fasta
+
+
+mothur > unique.seqs(fasta=current, count=current)
+Using /Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.good.count_table as input file for the count parameter.
+Using /Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.fasta as input file for the fasta parameter.
+49277	49270
+
+Output File Names: 
+/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.fasta
+/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.count_table
+
+
+mothur > pre.cluster(count=current, diffs=2)
+Using /Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.count_table as input file for the count parameter.
+Using /Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.fasta as input file for the fasta parameter.
+
+Using 10 processors.
+
+/******************************************/
+Splitting by sample: 
+
+Using 10 processors.
+
+Selecting sequences for groups M549-M550-M551-M552-M553
+
+
+Selecting sequences for groups M544-M545-M546-M547-M548
+
+
+Selecting sequences for groups M604-M605-M606-M607-M608
+
+
+Selecting sequences for groups M324-M325-M326-M327-M328
+
+
+Selecting sequences for groups M299-M300-M301-M302-M303
+
+
+Selecting sequences for groups M637-M689-M690-M693-M696-ZYMO
+
+
+Selecting sequences for groups M294-M295-M296-M297-M298
+
+
+Selecting sequences for groups M329-M330-M331-M332-M333
+
+
+Selecting sequences for groups M609-M610-M612-M613-M629-M630
+
+
+Selecting sequences for groups M631-M632-M633-M634-M635-M636
+
+Selected 798 sequences from M549.
+Selected 604 sequences from M550.
+Selected 522 sequences from M551.
+Selected 727 sequences from M552.
+Selected 833 sequences from M553.
+Selected 427 sequences from M544.
+Selected 936 sequences from M545.
+Selected 773 sequences from M546.
+Selected 354 sequences from M547.
+Selected 582 sequences from M548.
+Selected 1669 sequences from M324.
+Selected 1140 sequences from M325.
+Selected 1931 sequences from M326.
+Selected 1842 sequences from M327.
+Selected 1970 sequences from M328.
+Selected 2910 sequences from M637.
+Selected 159 sequences from M689.
+Selected 200 sequences from M690.
+Selected 179 sequences from M693.
+Selected 1386 sequences from M696.
+Selected 1551 sequences from ZYMO.
+Selected 2673 sequences from M604.
+Selected 1961 sequences from M605.
+Selected 1936 sequences from M606.
+Selected 1520 sequences from M607.
+Selected 2136 sequences from M608.
+Selected 1864 sequences from M294.
+Selected 1420 sequences from M295.
+Selected 1421 sequences from M296.
+Selected 2772 sequences from M297.
+Selected 1823 sequences from M298.
+Selected 1604 sequences from M299.
+Selected 1995 sequences from M300.
+Selected 2287 sequences from M301.
+Selected 1774 sequences from M302.
+Selected 474 sequences from M303.
+Selected 2112 sequences from M329.
+Selected 2112 sequences from M330.
+Selected 1441 sequences from M331.
+Selected 2642 sequences from M332.
+Selected 2861 sequences from M333.
+Selected 1691 sequences from M609.
+Selected 2118 sequences from M610.
+Selected 1655 sequences from M612.
+Selected 2252 sequences from M613.
+Selected 1283 sequences from M629.
+Selected 1271 sequences from M630.
+Selected 2183 sequences from M631.
+Selected 1113 sequences from M632.
+Selected 1724 sequences from M633.
+Selected 1556 sequences from M634.
+Selected 2821 sequences from M635.
+Selected 2274 sequences from M636.
+
+It took 4 seconds to split the dataset by sample.
+/******************************************/
+
+Processing group M299:
+
+Processing group M324:
+
+Processing group M329:
+
+Processing group M544:
+
+Processing group M549:
+
+Processing group M604:
+
+Processing group M609:
+
+Processing group M631:
+
+Processing group M637:
+
+Processing group M294:
+M544	427	14	413
+Total number of sequences before pre.cluster was 427.
+pre.cluster removed 413 sequences.
+
+It took 0 secs to cluster 427 sequences.
+
+Processing group M545:
+M549	798	74	724
+Total number of sequences before pre.cluster was 798.
+pre.cluster removed 724 sequences.
+
+It took 0 secs to cluster 798 sequences.
+
+Processing group M550:
+M545	936	117	819
+Total number of sequences before pre.cluster was 936.
+pre.cluster removed 819 sequences.
+
+It took 0 secs to cluster 936 sequences.
+
+Processing group M546:
+M550	604	15	589
+Total number of sequences before pre.cluster was 604.
+pre.cluster removed 589 sequences.
+
+It took 0 secs to cluster 604 sequences.
+
+Processing group M551:
+M546	773	69	704
+Total number of sequences before pre.cluster was 773.
+pre.cluster removed 704 sequences.
+
+It took 0 secs to cluster 773 sequences.
+
+Processing group M547:
+M324	1669	759	910
+Total number of sequences before pre.cluster was 1669.
+pre.cluster removed 910 sequences.
+
+It took 0 secs to cluster 1669 sequences.
+
+Processing group M325:
+M329	2112	795	1317
+Total number of sequences before pre.cluster was 2112.
+pre.cluster removed 1317 sequences.
+
+It took 0 secs to cluster 2112 sequences.
+
+Processing group M330:
+M299	1604	884	720
+Total number of sequences before pre.cluster was 1604.
+pre.cluster removed 720 sequences.
+
+It took 0 secs to cluster 1604 sequences.
+
+Processing group M300:
+M547	354	36	318
+Total number of sequences before pre.cluster was 354.
+pre.cluster removed 318 sequences.
+
+It took 0 secs to cluster 354 sequences.
+
+Processing group M548:
+M609	1691	887	804
+Total number of sequences before pre.cluster was 1691.
+pre.cluster removed 804 sequences.
+
+M294	1864	807	1057
+Total number of sequences before pre.cluster was 1864.
+pre.cluster removed 1057 sequences.
+
+It took 0 secs to cluster 1864 sequences.
+
+Processing group M295:
+It took 0 secs to cluster 1691 sequences.
+
+Processing group M610:
+M551	522	26	496
+Total number of sequences before pre.cluster was 522.
+pre.cluster removed 496 sequences.
+
+It took 0 secs to cluster 522 sequences.
+
+Processing group M552:
+M631	2183	1121	1062
+Total number of sequences before pre.cluster was 2183.
+pre.cluster removed 1062 sequences.
+
+It took 0 secs to cluster 2183 sequences.
+
+Processing group M632:
+M325	1140	399	741
+Total number of sequences before pre.cluster was 1140.
+pre.cluster removed 741 sequences.
+
+It took 0 secs to cluster 1140 sequences.
+
+Processing group M326:
+M548	582	70	512
+Total number of sequences before pre.cluster was 582.
+pre.cluster removed 512 sequences.
+
+It took 0 secs to cluster 582 sequences.
+M604	2673	974	1699
+Total number of sequences before pre.cluster was 2673.
+pre.cluster removed 1699 sequences.
+
+It took 0 secs to cluster 2673 sequences.
+
+Processing group M605:
+M552	727	86	641
+Total number of sequences before pre.cluster was 727.
+pre.cluster removed 641 sequences.
+
+It took 0 secs to cluster 727 sequences.
+
+Processing group M553:
+M295	1420	587	833
+Total number of sequences before pre.cluster was 1420.
+pre.cluster removed 833 sequences.
+
+It took 0 secs to cluster 1420 sequences.
+
+Processing group M296:
+M632	1113	540	573
+Total number of sequences before pre.cluster was 1113.
+pre.cluster removed 573 sequences.
+
+It took 0 secs to cluster 1113 sequences.
+
+Processing group M633:
+M553	833	58	775
+Total number of sequences before pre.cluster was 833.
+pre.cluster removed 775 sequences.
+
+It took 0 secs to cluster 833 sequences.
+M637	2910	1387	1523
+Total number of sequences before pre.cluster was 2910.
+pre.cluster removed 1523 sequences.
+
+M610	2118	896	1222
+Total number of sequences before pre.cluster was 2118.
+pre.cluster removed 1222 sequences.
+
+M300	1995	982	1013
+Total number of sequences before pre.cluster was 1995.
+pre.cluster removed 1013 sequences.
+
+It took 0 secs to cluster 2910 sequences.
+
+Processing group M689:
+It took 0 secs to cluster 1995 sequences.
+
+Processing group M301:
+It took 0 secs to cluster 2118 sequences.
+
+Processing group M612:
+M330	2112	950	1162
+Total number of sequences before pre.cluster was 2112.
+pre.cluster removed 1162 sequences.
+
+It took 0 secs to cluster 2112 sequences.
+
+Processing group M331:
+M605	1961	729	1232
+Total number of sequences before pre.cluster was 1961.
+pre.cluster removed 1232 sequences.
+
+It took 0 secs to cluster 1961 sequences.
+
+Processing group M606:
+M326	1931	895	1036
+Total number of sequences before pre.cluster was 1931.
+pre.cluster removed 1036 sequences.
+
+It took 0 secs to cluster 1931 sequences.
+
+Processing group M327:
+M689	159	58	101
+Total number of sequences before pre.cluster was 159.
+pre.cluster removed 101 sequences.
+
+It took 0 secs to cluster 159 sequences.
+
+Processing group M690:
+M296	1421	719	702
+Total number of sequences before pre.cluster was 1421.
+pre.cluster removed 702 sequences.
+
+It took 0 secs to cluster 1421 sequences.
+
+Processing group M297:
+M633	1724	742	982
+Total number of sequences before pre.cluster was 1724.
+pre.cluster removed 982 sequences.
+
+It took 0 secs to cluster 1724 sequences.
+
+Processing group M634:
+M690	200	50	150
+Total number of sequences before pre.cluster was 200.
+pre.cluster removed 150 sequences.
+
+It took 0 secs to cluster 200 sequences.
+
+Processing group M693:
+M693	179	24	155
+Total number of sequences before pre.cluster was 179.
+pre.cluster removed 155 sequences.
+
+It took 0 secs to cluster 179 sequences.
+
+Processing group M696:
+M331	1441	616	825
+Total number of sequences before pre.cluster was 1441.
+pre.cluster removed 825 sequences.
+
+It took 0 secs to cluster 1441 sequences.
+
+Processing group M332:
+M612	1655	764	891
+Total number of sequences before pre.cluster was 1655.
+pre.cluster removed 891 sequences.
+
+It took 0 secs to cluster 1655 sequences.
+
+Processing group M613:
+M606	1936	671	1265
+Total number of sequences before pre.cluster was 1936.
+pre.cluster removed 1265 sequences.
+
+It took 0 secs to cluster 1936 sequences.
+
+Processing group M607:
+M696	1386	450	936
+Total number of sequences before pre.cluster was 1386.
+pre.cluster removed 936 sequences.
+
+It took 0 secs to cluster 1386 sequences.
+
+Processing group ZYMO:
+M634	1556	738	818
+Total number of sequences before pre.cluster was 1556.
+pre.cluster removed 818 sequences.
+
+It took 0 secs to cluster 1556 sequences.
+
+Processing group M635:
+M327	1842	764	1078
+Total number of sequences before pre.cluster was 1842.
+pre.cluster removed 1078 sequences.
+
+It took 0 secs to cluster 1842 sequences.
+
+Processing group M328:
+ZYMO	1551	106	1445
+Total number of sequences before pre.cluster was 1551.
+pre.cluster removed 1445 sequences.
+
+It took 0 secs to cluster 1551 sequences.
+M301	2287	1159	1128
+Total number of sequences before pre.cluster was 2287.
+pre.cluster removed 1128 sequences.
+
+It took 0 secs to cluster 2287 sequences.
+
+Processing group M302:
+M607	1520	636	884
+Total number of sequences before pre.cluster was 1520.
+pre.cluster removed 884 sequences.
+
+It took 1 secs to cluster 1520 sequences.
+
+Processing group M608:
+M297	2772	1063	1709
+Total number of sequences before pre.cluster was 2772.
+pre.cluster removed 1709 sequences.
+
+It took 1 secs to cluster 2772 sequences.
+
+Processing group M298:
+M332	2642	1089	1553
+Total number of sequences before pre.cluster was 2642.
+pre.cluster removed 1553 sequences.
+
+It took 1 secs to cluster 2642 sequences.
+
+Processing group M333:
+M613	2252	1014	1238
+Total number of sequences before pre.cluster was 2252.
+pre.cluster removed 1238 sequences.
+
+It took 1 secs to cluster 2252 sequences.
+
+Processing group M629:
+M328	1970	828	1142
+Total number of sequences before pre.cluster was 1970.
+pre.cluster removed 1142 sequences.
+
+It took 1 secs to cluster 1970 sequences.
+M302	1774	854	920
+Total number of sequences before pre.cluster was 1774.
+pre.cluster removed 920 sequences.
+
+It took 1 secs to cluster 1774 sequences.
+
+Processing group M303:
+M303	474	262	212
+Total number of sequences before pre.cluster was 474.
+pre.cluster removed 212 sequences.
+
+It took 0 secs to cluster 474 sequences.
+M298	1823	712	1111
+Total number of sequences before pre.cluster was 1823.
+pre.cluster removed 1111 sequences.
+
+It took 0 secs to cluster 1823 sequences.
+M629	1283	574	709
+Total number of sequences before pre.cluster was 1283.
+pre.cluster removed 709 sequences.
+
+It took 0 secs to cluster 1283 sequences.
+
+Processing group M630:
+M635	2821	1193	1628
+Total number of sequences before pre.cluster was 2821.
+pre.cluster removed 1628 sequences.
+
+It took 1 secs to cluster 2821 sequences.
+
+Processing group M636:
+M608	2136	1120	1016
+Total number of sequences before pre.cluster was 2136.
+pre.cluster removed 1016 sequences.
+
+It took 0 secs to cluster 2136 sequences.
+M630	1271	602	669
+Total number of sequences before pre.cluster was 1271.
+pre.cluster removed 669 sequences.
+
+It took 0 secs to cluster 1271 sequences.
+M333	2861	1044	1817
+Total number of sequences before pre.cluster was 2861.
+pre.cluster removed 1817 sequences.
+
+It took 0 secs to cluster 2861 sequences.
+M636	2274	944	1330
+Total number of sequences before pre.cluster was 2274.
+pre.cluster removed 1330 sequences.
+
+It took 0 secs to cluster 2274 sequences.
+
+Deconvoluting count table results...
+It took 0 secs to merge 32953 sequences group data.
+/******************************************/
+Running get.seqs: 
+Selected 20995 sequences from /Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.fasta.
+/******************************************/
+It took 6 secs to run pre.cluster.
+
+Using 10 processors.
+
+Output File Names: 
+/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.fasta
+/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.count_table
+/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.M294.map
+/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.M295.map
+/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.M296.map
+/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.M297.map
+/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.M298.map
+/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.M299.map
+/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.M300.map
+/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.M301.map
+/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.M302.map
+/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.M303.map
+/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.M324.map
+/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.M325.map
+/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.M326.map
+/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.M327.map
+/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.M328.map
+/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.M329.map
+/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.M330.map
+/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.M331.map
+/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.M332.map
+/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.M333.map
+/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.M544.map
+/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.M545.map
+/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.M546.map
+/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.M547.map
+/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.M548.map
+/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.M549.map
+/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.M550.map
+/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.M551.map
+/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.M552.map
+/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.M553.map
+/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.M604.map
+/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.M605.map
+/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.M606.map
+/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.M607.map
+/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.M608.map
+/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.M609.map
+/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.M610.map
+/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.M612.map
+/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.M613.map
+/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.M629.map
+/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.M630.map
+/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.M631.map
+/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.M632.map
+/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.M633.map
+/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.M634.map
+/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.M635.map
+/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.M636.map
+/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.M637.map
+/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.M689.map
+/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.M690.map
+/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.M693.map
+/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.M696.map
+/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.ZYMO.map
+
+
+mothur > chimera.vsearch(count=current, count=current, dereplicate=t)
+Using /Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.count_table as input file for the count parameter.
+Using /Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.fasta as input file for the fasta parameter.
+
+Using 10 processors.
+Using vsearch version v2.16.0.
+Checking sequences from /Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.fasta ...
+
+/******************************************/
+Splitting by sample: 
+
+Using 10 processors.
+
+Selecting sequences for groups M549-M550-M551-M552-M553
+
+
+Selecting sequences for groups M544-M545-M546-M547-M548
+
+
+Selecting sequences for groups M637-M689-M690-M693-M696-ZYMO
+
+
+Selecting sequences for groups M324-M325-M326-M327-M328
+
+
+Selecting sequences for groups M299-M300-M301-M302-M303
+
+
+Selecting sequences for groups M294-M295-M296-M297-M298
+
+
+Selecting sequences for groups M329-M330-M331-M332-M333
+
+
+Selecting sequences for groups M604-M605-M606-M607-M608
+
+
+Selecting sequences for groups M631-M632-M633-M634-M635-M636
+
+
+Selecting sequences for groups M609-M610-M612-M613-M629-M630
+
+Selected 74 sequences from M549.
+Selected 15 sequences from M550.
+Selected 26 sequences from M551.
+Selected 86 sequences from M552.
+Selected 58 sequences from M553.
+Selected 14 sequences from M544.
+Selected 117 sequences from M545.
+Selected 69 sequences from M546.
+Selected 36 sequences from M547.
+Selected 70 sequences from M548.
+Selected 1387 sequences from M637.
+Selected 58 sequences from M689.
+Selected 50 sequences from M690.
+Selected 24 sequences from M693.
+Selected 450 sequences from M696.
+Selected 106 sequences from ZYMO.
+Selected 884 sequences from M299.
+Selected 982 sequences from M300.
+Selected 1159 sequences from M301.
+Selected 854 sequences from M302.
+Selected 262 sequences from M303.
+Selected 807 sequences from M294.
+Selected 587 sequences from M295.
+Selected 719 sequences from M296.
+Selected 1063 sequences from M297.
+Selected 712 sequences from M298.
+Selected 795 sequences from M329.
+Selected 950 sequences from M330.
+Selected 616 sequences from M331.
+Selected 1089 sequences from M332.
+Selected 1044 sequences from M333.
+Selected 759 sequences from M324.
+Selected 399 sequences from M325.
+Selected 895 sequences from M326.
+Selected 764 sequences from M327.
+Selected 828 sequences from M328.
+Selected 974 sequences from M604.
+Selected 729 sequences from M605.
+Selected 671 sequences from M606.
+Selected 636 sequences from M607.
+Selected 1120 sequences from M608.
+Selected 1121 sequences from M631.
+Selected 540 sequences from M632.
+Selected 742 sequences from M633.
+Selected 738 sequences from M634.
+Selected 1193 sequences from M635.
+Selected 944 sequences from M636.
+Selected 887 sequences from M609.
+Selected 896 sequences from M610.
+Selected 764 sequences from M612.
+Selected 1014 sequences from M613.
+Selected 574 sequences from M629.
+Selected 602 sequences from M630.
+
+It took 2 seconds to split the dataset by sample.
+/******************************************/
+
+It took 0 secs to check 14 sequences from group M544.
+
+It took 0 secs to check 74 sequences from group M549.
+
+It took 0 secs to check 759 sequences from group M324.
+
+It took 1 secs to check 795 sequences from group M329.
+
+It took 2 secs to check 807 sequences from group M294.
+
+It took 3 secs to check 884 sequences from group M299.
+
+It took 4 secs to check 1387 sequences from group M637.
+
+It took 4 secs to check 887 sequences from group M609.
+
+It took 5 secs to check 974 sequences from group M604.
+
+It took 5 secs to check 117 sequences from group M545.
+
+It took 6 secs to check 1121 sequences from group M631.
+
+It took 6 secs to check 15 sequences from group M550.
+
+It took 7 secs to check 399 sequences from group M325.
+
+It took 7 secs to check 950 sequences from group M330.
+
+It took 6 secs to check 587 sequences from group M295.
+
+It took 6 secs to check 982 sequences from group M300.
+
+It took 5 secs to check 58 sequences from group M689.
+
+It took 6 secs to check 896 sequences from group M610.
+
+It took 5 secs to check 729 sequences from group M605.
+
+It took 5 secs to check 69 sequences from group M546.
+
+It took 5 secs to check 540 sequences from group M632.
+
+It took 5 secs to check 26 sequences from group M551.
+
+It took 5 secs to check 895 sequences from group M326.
+
+It took 4 secs to check 616 sequences from group M331.
+
+It took 5 secs to check 719 sequences from group M296.
+
+It took 5 secs to check 1159 sequences from group M301.
+
+It took 5 secs to check 50 sequences from group M690.
+
+It took 5 secs to check 764 sequences from group M612.
+
+It took 5 secs to check 671 sequences from group M606.
+
+It took 5 secs to check 36 sequences from group M547.
+
+It took 5 secs to check 742 sequences from group M633.
+
+It took 5 secs to check 86 sequences from group M552.
+
+It took 5 secs to check 764 sequences from group M327.
+
+It took 6 secs to check 1089 sequences from group M332.
+
+It took 6 secs to check 1063 sequences from group M297.
+
+It took 5 secs to check 854 sequences from group M302.
+
+It took 5 secs to check 24 sequences from group M693.
+
+It took 5 secs to check 1014 sequences from group M613.
+
+It took 6 secs to check 636 sequences from group M607.
+
+It took 6 secs to check 70 sequences from group M548.
+
+It took 6 secs to check 738 sequences from group M634.
+
+It took 6 secs to check 58 sequences from group M553.
+
+It took 5 secs to check 828 sequences from group M328.
+
+It took 5 secs to check 1044 sequences from group M333.
+
+It took 5 secs to check 712 sequences from group M298.
+
+It took 5 secs to check 262 sequences from group M303.
+
+It took 6 secs to check 450 sequences from group M696.
+
+It took 5 secs to check 574 sequences from group M629.
+
+It took 5 secs to check 1120 sequences from group M608.
+
+It took 5 secs to check 1193 sequences from group M635.
+
+It took 2 secs to check 106 sequences from group ZYMO.
+
+It took 3 secs to check 602 sequences from group M630.
+
+It took 2 secs to check 944 sequences from group M636.
+It took 29 secs to check 32953 sequences.
+
+
+Removing chimeras from your input files:
+/******************************************/
+Running command: remove.seqs(fasta=/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.fasta, accnos=/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.denovo.vsearch.accnos)
+Removed 12946 sequences from /Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.fasta.
+
+Output File Names:
+/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.pick.fasta
+
+/******************************************/
+
+Output File Names:
+/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.denovo.vsearch.count_table
+/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.denovo.vsearch.chimeras
+/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.denovo.vsearch.accnos
+/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.denovo.vsearch.fasta
+
+
+mothur > summary.seqs(fasta=current, count=current)
+Using /Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.denovo.vsearch.count_table as input file for the count parameter.
+Using /Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.denovo.vsearch.fasta as input file for the fasta parameter.
+
+Using 10 processors.
+
+		Start	End	NBases	Ambigs	Polymer	NumSeqs
+Minimum:	1	402	248	0	3	1
+2.5%-tile:	1	402	252	0	3	10374
+25%-tile:	1	402	252	0	4	103737
+Median: 	1	402	253	0	5	207473
+75%-tile:	1	402	253	0	5	311209
+97.5%-tile:	1	402	253	0	6	404571
+Maximum:	1	402	255	0	8	414944
+Mean:	1	402	252	0	4
+# of unique seqs:	8049
+total # of seqs:	414944
+
+It took 0 secs to summarize 414944 sequences.
+
+Output File Names:
+/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.denovo.vsearch.summary
+
+
+mothur > classify.seqs(fasta=current, count=current, reference=/Users/jayvornh/Desktop/mothur_dbdb/trainset18_062020.rdp/trainset18_062020.rdp.fasta, taxonomy=/Users/jayvornh/Desktop/mothur_dbdb/trainset18_062020.rdp/trainset18_062020.rdp.tax, cutoff=80)
+Using /Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.denovo.vsearch.count_table as input file for the count parameter.
+Using /Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.denovo.vsearch.fasta as input file for the fasta parameter.
+
+Using 10 processors.
+Reading template taxonomy...     DONE.
+Reading template probabilities...     DONE.
+It took 5 seconds get probabilities.
+Classifying sequences from /Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.denovo.vsearch.fasta ...
+
+It took 8 secs to classify 8049 sequences.
+
+
+It took 0 secs to create the summary file for 8049 sequences.
+
+
+Output File Names: 
+/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.denovo.vsearch.rdp.wang.taxonomy
+/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.denovo.vsearch.rdp.wang.tax.summary
+
+
+mothur > remove.lineage(fasta=current, count=current, taxonomy=current, taxon=Chloroplast-Mitochondria-unknown-Archaea-Eukaryota)
+Using /Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.denovo.vsearch.count_table as input file for the count parameter.
+Using /Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.denovo.vsearch.fasta as input file for the fasta parameter.
+Using /Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.denovo.vsearch.rdp.wang.taxonomy as input file for the taxonomy parameter.
+
+/******************************************/
+Running command: remove.seqs(accnos=/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.denovo.vsearch.rdp.wang.accnos, count=/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.denovo.vsearch.count_table, fasta=/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.denovo.vsearch.fasta)
+Removed 1 sequences from /Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.denovo.vsearch.fasta.
+Removed 1 sequences from /Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.denovo.vsearch.count_table.
+
+Output File Names:
+/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.denovo.vsearch.pick.fasta
+/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.denovo.vsearch.pick.count_table
+
+/******************************************/
+
+Output File Names:
+/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.denovo.vsearch.rdp.wang.pick.taxonomy
+/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.denovo.vsearch.rdp.wang.accnos
+/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.denovo.vsearch.pick.count_table
+/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.denovo.vsearch.pick.fasta
+
+
+mothur > summary.seqs(fasta=current, count=current)
+Using /Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.denovo.vsearch.pick.count_table as input file for the count parameter.
+Using /Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.denovo.vsearch.pick.fasta as input file for the fasta parameter.
+
+Using 10 processors.
+
+		Start	End	NBases	Ambigs	Polymer	NumSeqs
+Minimum:	1	402	248	0	3	1
+2.5%-tile:	1	402	252	0	3	10374
+25%-tile:	1	402	252	0	4	103736
+Median: 	1	402	253	0	5	207472
+75%-tile:	1	402	253	0	5	311208
+97.5%-tile:	1	402	253	0	6	404570
+Maximum:	1	402	255	0	8	414943
+Mean:	1	402	252	0	4
+# of unique seqs:	8048
+total # of seqs:	414943
+
+It took 0 secs to summarize 414943 sequences.
+
+Output File Names:
+/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.denovo.vsearch.pick.summary
+
+
+mothur > summary.tax(taxonomy=current, count=current)
+Using /Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.denovo.vsearch.pick.count_table as input file for the count parameter.
+Using /Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.denovo.vsearch.rdp.wang.pick.taxonomy as input file for the taxonomy parameter.
+
+It took 0 secs to create the summary file for 414943 sequences.
+
+
+Output File Names: 
+/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.denovo.vsearch.rdp.wang.pick.tax.summary
+
+
+mothur > system(echo 'Running error estimation...')
+Running error estimation...
+
+
+mothur > get.groups(count=current, fasta=current, groups=ZYMO)
+Using /Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.denovo.vsearch.pick.count_table as input file for the count parameter.
+Using /Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.denovo.vsearch.pick.fasta as input file for the fasta parameter.
+Selected 12941 sequences from your count file.
+Selected 83 sequences from your fasta file.
+
+Output File names:
+/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.denovo.vsearch.pick.pick.count_table
+/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.denovo.vsearch.pick.pick.fasta
+
+
+mothur > seq.error(fasta=current, count=current, reference=/Users/jayvornh/Desktop/mothur_dbdb/mock_community/zymo.mock_.16S_fasta.fasta, aligned=F)
+Using /Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.denovo.vsearch.pick.pick.count_table as input file for the count parameter.
+Using /Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.denovo.vsearch.pick.pick.fasta as input file for the fasta parameter.
+
+Multiply error rate by 100 to obtain the percent sequencing errors.
+Overall error rate:	6.60954e-05
+Errors	Sequences
+0	12822
+1	31
+2	11
+3	49
+4	4
+It took 3 secs to check 83 sequences.
+
+Output File Names: 
+/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.denovo.vsearch.pick.pick.error.summary
+/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.denovo.vsearch.pick.pick.error.seq
+/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.denovo.vsearch.pick.pick.error.chimera
+/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.denovo.vsearch.pick.pick.error.seq.forward
+/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.denovo.vsearch.pick.pick.error.seq.reverse
+/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.denovo.vsearch.pick.pick.error.count
+/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.denovo.vsearch.pick.pick.error.matrix
+/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.denovo.vsearch.pick.pick.error.ref
+
+
+mothur > dist.seqs(fasta=current, cutoff=0.03)
+Using /Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.denovo.vsearch.pick.pick.fasta as input file for the fasta parameter.
+
+Using 10 processors.
+
+Sequence	Time	Num_Dists_Below_Cutoff
+
+It took 0 secs to find distances for 83 sequences. 465 distances below cutoff 0.03.
+
+
+Output File Names: 
+/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.denovo.vsearch.pick.pick.dist
+
+
+mothur > cluster(column=current, count=current)
+Using /Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.denovo.vsearch.pick.pick.dist as input file for the column parameter.
+Using /Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.denovo.vsearch.pick.pick.count_table as input file for the count parameter.
+
+Using 10 processors.
+
+You did not set a cutoff, using 0.03.
+
+Clustering /Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.denovo.vsearch.pick.pick.dist
+
+
+iter	time	label	num_otus	cutoff	tp	tn	fp	fn	sensitivity	specificity	ppv	npv	fdr	accuracy	mcc	f1score
+
+0.03
+0	0	0.03	83	0.03	0	2938	0	465	0	1	0	0.863356	1	0.863356	0	0	
+1	0	0.03	11	0.03	444	2927	11	21	0.954839	0.996256	0.975824	0.992877	0.975824	0.990597	0.959857	0.965217	
+2	0	0.03	11	0.03	444	2927	11	21	0.954839	0.996256	0.975824	0.992877	0.975824	0.990597	0.959857	0.965217	
+
+
+It took 0 seconds to cluster
+
+Output File Names: 
+/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.denovo.vsearch.pick.pick.opti_mcc.list
+/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.denovo.vsearch.pick.pick.opti_mcc.steps
+/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.denovo.vsearch.pick.pick.opti_mcc.sensspec
+
+
+mothur > make.shared(list=current, count=current, label=0.03)
+Using /Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.denovo.vsearch.pick.pick.count_table as input file for the count parameter.
+Using /Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.denovo.vsearch.pick.pick.opti_mcc.list as input file for the list parameter.
+0.03
+
+Output File Names:
+/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.denovo.vsearch.pick.pick.opti_mcc.shared
+
+
+mothur > rarefaction.single(shared=current)
+Using /Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.denovo.vsearch.pick.pick.opti_mcc.shared as input file for the shared parameter.
+
+Using 10 processors.
+0.03
+
+It took 0 secs to run rarefaction.single.
+
+Output File Names: 
+/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.denovo.vsearch.pick.pick.opti_mcc.groups.rarefaction
+
+
+mothur > get.current()
+
+Current RAM usage: 1.72858 Gigabytes. Total Ram: 64 Gigabytes.
+
+Current files saved by mothur:
+accnos=/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.denovo.vsearch.rdp.wang.accnos
+column=/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.denovo.vsearch.pick.pick.dist
+fasta=/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.denovo.vsearch.pick.pick.fasta
+list=/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.denovo.vsearch.pick.pick.opti_mcc.list
+shared=/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.denovo.vsearch.pick.pick.opti_mcc.shared
+taxonomy=/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.denovo.vsearch.rdp.wang.pick.taxonomy
+contigsreport=/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.contigs_report
+count=/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.denovo.vsearch.pick.pick.count_table
+processors=10
+summary=/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.denovo.vsearch.pick.summary
+file=/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.files
+
+Current input directories saved by mothur:
+	/Users/jayvornh/Desktop/mothur_dbdb/processing/
+
+
+Current default directories saved by mothur:
+	/Users/jayvornh/Desktop/mothur_dbdb/
+
+
+Current working directory: /Users/jayvornh/Desktop/mothur_dbdb/
+
+Output File Names: 
+current_files.summary
+
+
+mothur > system(echo 'Preparing for ASV/OTU-based analysis...')
+Preparing for ASV/OTU-based analysis...
+
+
+mothur > set.dir(input=/Users/jayvornh/Desktop/mothur_dbdb/processing)
+Mothur's directories:
+inputdir=
+	/Users/jayvornh/Desktop/mothur_dbdb/processing/
+
+
+mothur > set.dir(output=/Users/jayvornh/Desktop/mothur_dbdb/processing)
+Mothur's directories:
+outputDir=/Users/jayvornh/Desktop/mothur_dbdb/processing/
+
+mothur > set.current(count=dbdb.trim.contigs.unique.good.filter.unique.precluster.denovo.vsearch.pick.count_table)
+Unable to open dbdb.trim.contigs.unique.good.filter.unique.precluster.denovo.vsearch.pick.count_table. Trying output directory /Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.denovo.vsearch.pick.count_table.
+
+Using 10 processors.
+
+Current files saved by mothur:
+accnos=/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.denovo.vsearch.rdp.wang.accnos
+column=/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.denovo.vsearch.pick.pick.dist
+fasta=/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.denovo.vsearch.pick.pick.fasta
+list=/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.denovo.vsearch.pick.pick.opti_mcc.list
+shared=/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.denovo.vsearch.pick.pick.opti_mcc.shared
+taxonomy=/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.denovo.vsearch.rdp.wang.pick.taxonomy
+contigsreport=/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.contigs_report
+count=/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.denovo.vsearch.pick.count_table
+processors=10
+summary=/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.denovo.vsearch.pick.summary
+file=/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.files
+
+Output File Names: 
+/Users/jayvornh/Desktop/mothur_dbdb/processing/current_files.summary
+
+
+mothur > set.current(fasta=dbdb.trim.contigs.unique.good.filter.unique.precluster.denovo.vsearch.pick.fasta)
+Unable to open dbdb.trim.contigs.unique.good.filter.unique.precluster.denovo.vsearch.pick.fasta. Trying output directory /Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.denovo.vsearch.pick.fasta.
+
+Using 10 processors.
+
+Current files saved by mothur:
+accnos=/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.denovo.vsearch.rdp.wang.accnos
+column=/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.denovo.vsearch.pick.pick.dist
+fasta=/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.denovo.vsearch.pick.fasta
+list=/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.denovo.vsearch.pick.pick.opti_mcc.list
+shared=/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.denovo.vsearch.pick.pick.opti_mcc.shared
+taxonomy=/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.denovo.vsearch.rdp.wang.pick.taxonomy
+contigsreport=/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.contigs_report
+count=/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.denovo.vsearch.pick.count_table
+processors=10
+summary=/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.denovo.vsearch.pick.summary
+file=/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.files
+
+Output File Names: 
+/Users/jayvornh/Desktop/mothur_dbdb/processing/current_files.summary
+
+
+mothur > remove.groups(count=current, fasta=current, taxonomy=current, groups=ZYMO)
+Using /Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.denovo.vsearch.pick.count_table as input file for the count parameter.
+Using /Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.denovo.vsearch.pick.fasta as input file for the fasta parameter.
+Using /Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.denovo.vsearch.rdp.wang.pick.taxonomy as input file for the taxonomy parameter.
+Removed 12941 sequences from your count file.
+Removed 79 sequences from your fasta file.
+Removed 79 sequences from your taxonomy file.
+
+Output File names: 
+/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.denovo.vsearch.pick.pick.count_table
+/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.denovo.vsearch.pick.pick.fasta
+/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.denovo.vsearch.rdp.wang.pick.pick.taxonomy
+
+
+mothur > rename.file(fasta=current, count=current, taxonomy=current, prefix=final_dbdb)
+Using /Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.denovo.vsearch.pick.pick.count_table as input file for the count parameter.
+Using /Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.denovo.vsearch.pick.pick.fasta as input file for the fasta parameter.
+Using /Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.denovo.vsearch.rdp.wang.pick.pick.taxonomy as input file for the taxonomy parameter.
+
+Current files saved by mothur:
+accnos=/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.denovo.vsearch.rdp.wang.accnos
+column=/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.denovo.vsearch.pick.pick.dist
+fasta=/Users/jayvornh/Desktop/mothur_dbdb/processing/final_dbdb.fasta
+list=/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.denovo.vsearch.pick.pick.opti_mcc.list
+shared=/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.denovo.vsearch.pick.pick.opti_mcc.shared
+taxonomy=/Users/jayvornh/Desktop/mothur_dbdb/processing/final_dbdb.taxonomy
+contigsreport=/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.contigs_report
+count=/Users/jayvornh/Desktop/mothur_dbdb/processing/final_dbdb.count_table
+processors=10
+summary=/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.denovo.vsearch.pick.summary
+file=/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.files
+
+mothur > summary.seqs(fasta=current, count=current)
+Using /Users/jayvornh/Desktop/mothur_dbdb/processing/final_dbdb.count_table as input file for the count parameter.
+Using /Users/jayvornh/Desktop/mothur_dbdb/processing/final_dbdb.fasta as input file for the fasta parameter.
+
+Using 10 processors.
+
+		Start	End	NBases	Ambigs	Polymer	NumSeqs
+Minimum:	1	402	248	0	3	1
+2.5%-tile:	1	402	252	0	3	10051
+25%-tile:	1	402	252	0	4	100501
+Median: 	1	402	253	0	5	201002
+75%-tile:	1	402	253	0	5	301502
+97.5%-tile:	1	402	253	0	6	391952
+Maximum:	1	402	255	0	8	402002
+Mean:	1	402	252	0	4
+# of unique seqs:	7969
+total # of seqs:	402002
+
+It took 1 secs to summarize 402002 sequences.
+
+Output File Names:
+/Users/jayvornh/Desktop/mothur_dbdb/processing/final_dbdb.summary
+
+
+mothur > make.shared(count=current)
+Using /Users/jayvornh/Desktop/mothur_dbdb/processing/final_dbdb.count_table as input file for the count parameter.
+ASV
+
+Output File Names:
+/Users/jayvornh/Desktop/mothur_dbdb/processing/final_dbdb.asv.list
+/Users/jayvornh/Desktop/mothur_dbdb/processing/final_dbdb.asv.shared
+
+
+mothur > classify.otu(list=current, count=current, taxonomy=current, label=ASV)
+Using /Users/jayvornh/Desktop/mothur_dbdb/processing/final_dbdb.count_table as input file for the count parameter.
+Using /Users/jayvornh/Desktop/mothur_dbdb/processing/final_dbdb.asv.list as input file for the list parameter.
+Using /Users/jayvornh/Desktop/mothur_dbdb/processing/final_dbdb.taxonomy as input file for the taxonomy parameter.
+ASV
+
+Output File Names: 
+/Users/jayvornh/Desktop/mothur_dbdb/processing/final_dbdb.asv.ASV.cons.taxonomy
+/Users/jayvornh/Desktop/mothur_dbdb/processing/final_dbdb.asv.ASV.cons.tax.summary
+
+
+mothur > system(cp /Users/jayvornh/Desktop/mothur_dbdb/processing/final_dbdb.ASV.shared raw_data)
+
+
+mothur > dist.seqs(fasta=current, cutoff=0.03)
+Using /Users/jayvornh/Desktop/mothur_dbdb/processing/final_dbdb.fasta as input file for the fasta parameter.
+
+Using 10 processors.
+
+Sequence	Time	Num_Dists_Below_Cutoff
+
+It took 22 secs to find distances for 7969 sequences. 181349 distances below cutoff 0.03.
+
+
+Output File Names: 
+/Users/jayvornh/Desktop/mothur_dbdb/processing/final_dbdb.dist
+
+
+mothur > cluster(column=current, count=current)
+Using /Users/jayvornh/Desktop/mothur_dbdb/processing/final_dbdb.dist as input file for the column parameter.
+Using /Users/jayvornh/Desktop/mothur_dbdb/processing/final_dbdb.count_table as input file for the count parameter.
+
+Using 10 processors.
+
+You did not set a cutoff, using 0.03.
+
+Clustering /Users/jayvornh/Desktop/mothur_dbdb/processing/final_dbdb.dist
+
+
+iter	time	label	num_otus	cutoff	tp	tn	fp	fn	sensitivity	specificity	ppv	npv	fdr	accuracy	mcc	f1score
+
+0.03
+0	0	0.03	7969	0.03	0	3.15671e+07	0	181349	0	1	0	0.994288	1	0.994288	0	0	
+1	0	0.03	1486	0.03	143117	3.15502e+07	16913	38232	0.78918	0.999464	0.894314	0.99879	0.894314	0.998263	0.83925	0.838464	
+2	0	0.03	1340	0.03	148409	3.15479e+07	19291	32940	0.818361	0.999389	0.884967	0.998957	0.884967	0.998355	0.850194	0.850362	
+3	0	0.03	1333	0.03	148737	3.15476e+07	19583	32612	0.82017	0.99938	0.883656	0.998967	0.883656	0.998356	0.850502	0.85073	
+4	0	0.03	1331	0.03	148811	3.15475e+07	19645	32538	0.820578	0.999378	0.883382	0.99897	0.883382	0.998356	0.850582	0.850823	
+
+
+It took 1 seconds to cluster
+
+Output File Names: 
+/Users/jayvornh/Desktop/mothur_dbdb/processing/final_dbdb.opti_mcc.list
+/Users/jayvornh/Desktop/mothur_dbdb/processing/final_dbdb.opti_mcc.steps
+/Users/jayvornh/Desktop/mothur_dbdb/processing/final_dbdb.opti_mcc.sensspec
+
+
+mothur > make.shared(list=current, count=current, label=0.03)
+Using /Users/jayvornh/Desktop/mothur_dbdb/processing/final_dbdb.count_table as input file for the count parameter.
+Using /Users/jayvornh/Desktop/mothur_dbdb/processing/final_dbdb.opti_mcc.list as input file for the list parameter.
+0.03
+
+Output File Names:
+/Users/jayvornh/Desktop/mothur_dbdb/processing/final_dbdb.opti_mcc.shared
+
+
+mothur > classify.otu(list=current, count=current, taxonomy=current, label=0.03)
+Using /Users/jayvornh/Desktop/mothur_dbdb/processing/final_dbdb.count_table as input file for the count parameter.
+Using /Users/jayvornh/Desktop/mothur_dbdb/processing/final_dbdb.opti_mcc.list as input file for the list parameter.
+Using /Users/jayvornh/Desktop/mothur_dbdb/processing/final_dbdb.taxonomy as input file for the taxonomy parameter.
+0.03
+
+Output File Names: 
+/Users/jayvornh/Desktop/mothur_dbdb/processing/final_dbdb.opti_mcc.0.03.cons.taxonomy
+/Users/jayvornh/Desktop/mothur_dbdb/processing/final_dbdb.opti_mcc.0.03.cons.tax.summary
+
+
+mothur > system(cp /Users/jayvornh/Desktop/mothur_dbdb/processing/final_dbdb.opti_mcc.shared raw_data)
+
+
+mothur > system(cp /Users/jayvornh/Desktop/mothur_dbdb/processing/final_dbdb.opti_mcc.0.03.cons.taxonomy raw_data)
+
+
+mothur > system(echo 'Getting representative sequences...')
+Getting representative sequences...
+
+
+mothur > dist.seqs(fasta=current, cutoff=0.10)
+Using /Users/jayvornh/Desktop/mothur_dbdb/processing/final_dbdb.fasta as input file for the fasta parameter.
+
+Using 10 processors.
+
+Sequence	Time	Num_Dists_Below_Cutoff
+
+It took 22 secs to find distances for 7969 sequences. 3885515 distances below cutoff 0.1.
+
+
+Output File Names: 
+/Users/jayvornh/Desktop/mothur_dbdb/processing/final_dbdb.dist
+
+
+mothur > get.oturep(column=current, list=current, count=current, fasta=current)
+Using /Users/jayvornh/Desktop/mothur_dbdb/processing/final_dbdb.dist as input file for the column parameter.
+Using /Users/jayvornh/Desktop/mothur_dbdb/processing/final_dbdb.count_table as input file for the count parameter.
+Using /Users/jayvornh/Desktop/mothur_dbdb/processing/final_dbdb.fasta as input file for the fasta parameter.
+Using /Users/jayvornh/Desktop/mothur_dbdb/processing/final_dbdb.opti_mcc.list as input file for the list parameter.
+You did not provide a label, using 0.03.
+0.03	1331
+
+Output File Names: 
+/Users/jayvornh/Desktop/mothur_dbdb/processing/final_dbdb.opti_mcc.0.03.rep.count_table
+/Users/jayvornh/Desktop/mothur_dbdb/processing/final_dbdb.opti_mcc.0.03.rep.fasta
+
+
+mothur > system(cp /Users/jayvornh/Desktop/mothur_dbdb/processing/final_dbdb.opti_mcc.0.03.rep.fasta raw_data)
+
+
+mothur > system(echo 'Preparing for phylotype-based analysis...')
+Preparing for phylotype-based analysis...
+
+
+mothur > set.current(count=final_dbdb.count_table)
+Unable to open final_dbdb.count_table. Trying output directory /Users/jayvornh/Desktop/mothur_dbdb/processing/final_dbdb.count_table.
+
+Using 10 processors.
+
+Current files saved by mothur:
+accnos=/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.denovo.vsearch.rdp.wang.accnos
+column=/Users/jayvornh/Desktop/mothur_dbdb/processing/final_dbdb.dist
+fasta=/Users/jayvornh/Desktop/mothur_dbdb/processing/final_dbdb.opti_mcc.0.03.rep.fasta
+list=/Users/jayvornh/Desktop/mothur_dbdb/processing/final_dbdb.opti_mcc.list
+shared=/Users/jayvornh/Desktop/mothur_dbdb/processing/final_dbdb.opti_mcc.shared
+taxonomy=/Users/jayvornh/Desktop/mothur_dbdb/processing/final_dbdb.taxonomy
+constaxonomy=/Users/jayvornh/Desktop/mothur_dbdb/processing/final_dbdb.opti_mcc.0.03.cons.taxonomy
+contigsreport=/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.contigs_report
+count=/Users/jayvornh/Desktop/mothur_dbdb/processing/final_dbdb.count_table
+processors=10
+summary=/Users/jayvornh/Desktop/mothur_dbdb/processing/final_dbdb.summary
+file=/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.files
+
+Output File Names: 
+/Users/jayvornh/Desktop/mothur_dbdb/processing/current_files.summary
+
+
+mothur > phylotype(taxonomy=current)
+Using /Users/jayvornh/Desktop/mothur_dbdb/processing/final_dbdb.taxonomy as input file for the taxonomy parameter.
+1
+2
+3
+4
+5
+6
+
+Output File Names: 
+/Users/jayvornh/Desktop/mothur_dbdb/processing/final_dbdb.tx.sabund
+/Users/jayvornh/Desktop/mothur_dbdb/processing/final_dbdb.tx.rabund
+/Users/jayvornh/Desktop/mothur_dbdb/processing/final_dbdb.tx.list
+
+
+mothur > make.shared(list=current, count=current, label=1)
+Using /Users/jayvornh/Desktop/mothur_dbdb/processing/final_dbdb.count_table as input file for the count parameter.
+Using /Users/jayvornh/Desktop/mothur_dbdb/processing/final_dbdb.tx.list as input file for the list parameter.
+1
+
+Output File Names:
+/Users/jayvornh/Desktop/mothur_dbdb/processing/final_dbdb.tx.shared
+
+
+mothur > classify.otu(list=current, count=current, taxonomy=current, label=1)
+Using /Users/jayvornh/Desktop/mothur_dbdb/processing/final_dbdb.count_table as input file for the count parameter.
+Using /Users/jayvornh/Desktop/mothur_dbdb/processing/final_dbdb.tx.list as input file for the list parameter.
+Using /Users/jayvornh/Desktop/mothur_dbdb/processing/final_dbdb.taxonomy as input file for the taxonomy parameter.
+1
+
+Output File Names: 
+/Users/jayvornh/Desktop/mothur_dbdb/processing/final_dbdb.tx.1.cons.taxonomy
+/Users/jayvornh/Desktop/mothur_dbdb/processing/final_dbdb.tx.1.cons.tax.summary
+/Users/jayvornh/Desktop/mothur_dbdb/processing/final_dbdb.tx.2.cons.taxonomy
+/Users/jayvornh/Desktop/mothur_dbdb/processing/final_dbdb.tx.2.cons.tax.summary
+/Users/jayvornh/Desktop/mothur_dbdb/processing/final_dbdb.tx.3.cons.taxonomy
+/Users/jayvornh/Desktop/mothur_dbdb/processing/final_dbdb.tx.3.cons.tax.summary
+/Users/jayvornh/Desktop/mothur_dbdb/processing/final_dbdb.tx.4.cons.taxonomy
+/Users/jayvornh/Desktop/mothur_dbdb/processing/final_dbdb.tx.4.cons.tax.summary
+/Users/jayvornh/Desktop/mothur_dbdb/processing/final_dbdb.tx.5.cons.taxonomy
+/Users/jayvornh/Desktop/mothur_dbdb/processing/final_dbdb.tx.5.cons.tax.summary
+/Users/jayvornh/Desktop/mothur_dbdb/processing/final_dbdb.tx.6.cons.taxonomy
+/Users/jayvornh/Desktop/mothur_dbdb/processing/final_dbdb.tx.6.cons.tax.summary
+
+
+mothur > get.current()
+
+Current RAM usage: 1.72858 Gigabytes. Total Ram: 64 Gigabytes.
+
+Current files saved by mothur:
+accnos=/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.trim.contigs.unique.good.filter.unique.precluster.denovo.vsearch.rdp.wang.accnos
+column=/Users/jayvornh/Desktop/mothur_dbdb/processing/final_dbdb.dist
+fasta=/Users/jayvornh/Desktop/mothur_dbdb/processing/final_dbdb.opti_mcc.0.03.rep.fasta
+list=/Users/jayvornh/Desktop/mothur_dbdb/processing/final_dbdb.tx.list
+rabund=/Users/jayvornh/Desktop/mothur_dbdb/processing/final_dbdb.tx.rabund
+sabund=/Users/jayvornh/Desktop/mothur_dbdb/processing/final_dbdb.tx.sabund
+shared=/Users/jayvornh/Desktop/mothur_dbdb/processing/final_dbdb.tx.shared
+taxonomy=/Users/jayvornh/Desktop/mothur_dbdb/processing/final_dbdb.taxonomy
+constaxonomy=/Users/jayvornh/Desktop/mothur_dbdb/processing/final_dbdb.tx.1.cons.taxonomy
+contigsreport=/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.contigs_report
+count=/Users/jayvornh/Desktop/mothur_dbdb/processing/final_dbdb.count_table
+processors=10
+summary=/Users/jayvornh/Desktop/mothur_dbdb/processing/final_dbdb.summary
+file=/Users/jayvornh/Desktop/mothur_dbdb/processing/dbdb.files
+
+Current output directory saved by mothur: /Users/jayvornh/Desktop/mothur_dbdb/processing/
+
+Current default directories saved by mothur:
+	/Users/jayvornh/Desktop/mothur_dbdb/
+
+
+Current working directory: /Users/jayvornh/Desktop/mothur_dbdb/
+
+Output File Names: 
+/Users/jayvornh/Desktop/mothur_dbdb/processing/current_files.summary
+
+
+mothur > system(echo 'Counting groups...')
+Counting groups...
+
+
+mothur > count.groups(shared=final_dbdb.opti_mcc.shared)
+Unable to open final_dbdb.opti_mcc.shared. Trying output directory /Users/jayvornh/Desktop/mothur_dbdb/processing/final_dbdb.opti_mcc.shared.
+M294 contains 7450.
+M295 contains 6454.
+M296 contains 4759.
+M297 contains 12092.
+M298 contains 8610.
+M299 contains 4873.
+M300 contains 6867.
+M301 contains 7046.
+M302 contains 6769.
+M303 contains 1830.
+M324 contains 5972.
+M325 contains 5755.
+M326 contains 8728.
+M327 contains 8379.
+M328 contains 7966.
+M329 contains 9279.
+M330 contains 7629.
+M331 contains 5996.
+M332 contains 10260.
+M333 contains 13261.
+M544 contains 6969.
+M545 contains 12364.
+M546 contains 9335.
+M547 contains 4193.
+M548 contains 5589.
+M549 contains 11267.
+M550 contains 14249.
+M551 contains 13002.
+M552 contains 9220.
+M553 contains 16024.
+M604 contains 12120.
+M605 contains 9999.
+M606 contains 8701.
+M607 contains 6235.
+M608 contains 6262.
+M609 contains 5663.
+M610 contains 9207.
+M612 contains 6113.
+M613 contains 8852.
+M629 contains 4577.
+M630 contains 4510.
+M631 contains 7213.
+M632 contains 3793.
+M633 contains 7102.
+M634 contains 5831.
+M635 contains 10731.
+M636 contains 9296.
+M637 contains 9765.
+M689 contains 887.
+M690 contains 2227.
+M693 contains 2065.
+M696 contains 8666.
+
+Size of smallest group: 887.
+
+Total seqs: 402002.
+
+Output File Names: 
+/Users/jayvornh/Desktop/mothur_dbdb/processing/final_dbdb.opti_mcc.count.summary
+
+
+mothur > quit()
+
+
+It took 228 seconds to run 64 commands from mothur_processing_dbdb.batch batch file.
+
+Logfile : mothur.1715352818.logfile
+
